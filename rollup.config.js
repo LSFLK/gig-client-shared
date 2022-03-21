@@ -5,22 +5,6 @@ import pkg from './package.json';
 
 export default [
     {
-        input: "src/index.js",
-        output: [
-            {file: "dist/index.cjs.js", format: 'cjs'},
-            {file: "dist/index.esm.js", format: 'esm'}
-        ],
-        plugins: [
-            external(),
-            babel({
-                exclude: 'node_modules/**',
-                babelHelpers: 'bundled'
-            }),
-            del({targets: ['dist/index.cjs.js', 'dist/index.esm.js']}),
-        ],
-        external: Object.keys(pkg.peerDependencies || {})
-    },
-    {
         input: "src/auth/index.js",
         output: [
             {file: "dist/auth/index.cjs.js", format: 'cjs'},
