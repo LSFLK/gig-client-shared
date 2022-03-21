@@ -1,4 +1,4 @@
-const app = require("../../../../../../src/routes");        //parent project root directory
+const app = require("../../../../../src/routes");        //parent project root directory
 
 export const AppRoutes = app.AppRoutes;
 
