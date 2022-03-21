@@ -2,7 +2,7 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-var app = require("../../../../../../src/routes"); //parent project root directory
+var app = require("../../../../../src/routes"); //parent project root directory
 
 
 var AppRoutes = app.AppRoutes;

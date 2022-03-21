@@ -144,7 +144,7 @@ function logout(setUserState) {
   }
 }
 
-var app = require("../../../../../../src/routes"); //parent project root directory
+var app = require("../../../../../src/routes"); //parent project root directory
 
 
 var AppRoutes = app.AppRoutes;

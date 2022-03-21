@@ -564,7 +564,7 @@ var Styles = function Styles(theme) {
   };
 };
 
-var app = require("../../../../../../src/routes"); //parent project root directory
+var app = require("../../../../../src/routes"); //parent project root directory
 
 
 var AppRoutes = app.AppRoutes;
