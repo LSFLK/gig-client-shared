@@ -4,8 +4,10 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
-  "version": "0.0.9",
+  "version": "0.1.0",
+  "main": "dist/index.cjs.js",
   "exports": {
+    ".": "dist/index.cjs.js",
     "./auth": "./dist/auth/index.esm.js",
     "./components": "./dist/components/index.esm.js",
     "./functions": "./dist/functions/index.esm.js"

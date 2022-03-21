@@ -1,6 +1,6 @@
-var api = require("../../../src/server");
+var api = require("../../../../src/server");
 
-var app = require("../../../src/routes");
+var app = require("../../../../src/routes");
 
 var AppRoutes = app.AppRoutes;
 var ApiRoutes = api.ApiRoutes;

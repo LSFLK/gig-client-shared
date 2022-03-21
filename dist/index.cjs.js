@@ -3,6 +3,7 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 
 var React = require('react');
+var reactRouterDom = require('react-router-dom');
 var PropTypes = require('prop-types');
 var Typography = require('@mui/material/Typography');
 var styles$1 = require('@mui/styles');
@@ -12,7 +13,6 @@ var Tooltip = require('@mui/material/Tooltip/Tooltip');
 var List = require('@mui/material/List/List');
 var Grid = require('@mui/material/Grid/Grid');
 var ListItem = require('@mui/material/ListItem/ListItem');
-var reactRouterDom = require('react-router-dom');
 var Paper = require('@mui/material/Paper');
 var Chip = require('@mui/material/Chip');
 var Moment = require('moment');
@@ -190,6 +190,476 @@ function _createSuper(Derived) {
     return _possibleConstructorReturn(this, result);
   };
 }
+
+function _slicedToArray(arr, i) {
+  return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
+}
+
+function _arrayWithHoles(arr) {
+  if (Array.isArray(arr)) return arr;
+}
+
+function _iterableToArrayLimit(arr, i) {
+  var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"];
+
+  if (_i == null) return;
+  var _arr = [];
+  var _n = true;
+  var _d = false;
+
+  var _s, _e;
+
+  try {
+    for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) {
+      _arr.push(_s.value);
+
+      if (i && _arr.length === i) break;
+    }
+  } catch (err) {
+    _d = true;
+    _e = err;
+  } finally {
+    try {
+      if (!_n && _i["return"] != null) _i["return"]();
+    } finally {
+      if (_d) throw _e;
+    }
+  }
+
+  return _arr;
+}
+
+function _unsupportedIterableToArray(o, minLen) {
+  if (!o) return;
+  if (typeof o === "string") return _arrayLikeToArray(o, minLen);
+  var n = Object.prototype.toString.call(o).slice(8, -1);
+  if (n === "Object" && o.constructor) n = o.constructor.name;
+  if (n === "Map" || n === "Set") return Array.from(o);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
+}
+
+function _arrayLikeToArray(arr, len) {
+  if (len == null || len > arr.length) len = arr.length;
+
+  for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i];
+
+  return arr2;
+}
+
+function _nonIterableRest() {
+  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+
+var AuthStore = {
+  user: 'username',
+  token: 'token',
+  role: 'role'
+};
+var UserRoles = {
+  Admin: "admin",
+  Editor: "editor",
+  Crawler: "crawler",
+  Reader: "reader"
+};
+
+var authStorage = localStorage;
+function getAuthUser() {
+  return authStorage.getItem(AuthStore.user);
+}
+function setAuthUser(user) {
+  authStorage.setItem(AuthStore.user, user);
+}
+function getUserRole() {
+  return authStorage.getItem(AuthStore.role);
+}
+function setUserRole(role) {
+  authStorage.setItem(AuthStore.role, role);
+}
+function getAuthToken() {
+  return authStorage.getItem(AuthStore.token);
+}
+function setAuthToken(token) {
+  authStorage.setItem(AuthStore.token, token);
+}
+function logout(setUserState) {
+  if (!setUserState) {
+    console.log("user set state function is undefined. This might cause the App to not function properly.");
+  }
+
+  setUserState("");
+
+  for (var _i = 0, _Object$entries = Object.entries(AuthStore); _i < _Object$entries.length; _i++) {
+    var _Object$entries$_i = _slicedToArray(_Object$entries[_i], 2),
+        key = _Object$entries$_i[0],
+        value = _Object$entries$_i[1];
+
+    console.log("removing auth data:", key);
+    authStorage.removeItem(value);
+  }
+}
+
+var api = require("../../../../src/server");
+
+var app = require("../../../../src/routes");
+
+var AppRoutes = app.AppRoutes;
+var ApiRoutes = api.ApiRoutes;
+
+function deleteEntity(entity, navigate) {
+  var isConfirmed = window.confirm("Are you sure you want to delete this entity?");
+
+  if (isConfirmed) {
+    var deleteUrl = getServerUrl(ApiRoutes.delete);
+    var requestOptions = {
+      headers: this.props.getHeaders(),
+      method: 'POST',
+      body: JSON.stringify({
+        title: entity.title
+      })
+    };
+    fetch(deleteUrl, requestOptions).then(function (results) {
+      return results.json();
+    }, function (error) {
+      alert("error connecting to server");
+    }).then(function (data) {
+      if (data) {
+        if (data.status === 200) {
+          navigate('/');
+        } else {
+          alert("login error! " + data.status);
+        }
+      }
+    });
+  }
+}
+
+function getResults(_x, _x2, _x3, _x4, _x5, _x6, _x7) {
+  return _getResults.apply(this, arguments);
+}
+
+function _getResults() {
+  _getResults = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(searchUrl, newSearch, result, page, setResults, setPage, limit) {
+    var response, json;
+    return regeneratorRuntime.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            searchUrl += '&limit=' + limit + '&page=' + (newSearch ? 1 : page + 1);
+            _context.next = 3;
+            return fetch(searchUrl, {
+              method: 'GET'
+            });
+
+          case 3:
+            response = _context.sent;
+            _context.next = 6;
+            return response.json();
+
+          case 6:
+            json = _context.sent;
+
+            if (!json) {
+              _context.next = 18;
+              break;
+            }
+
+            if (!(response.status === 200)) {
+              _context.next = 18;
+              break;
+            }
+
+            if (!(newSearch || result == null)) {
+              _context.next = 15;
+              break;
+            }
+
+            setResults(json);
+            setPage(1);
+            return _context.abrupt("return", json);
+
+          case 15:
+            setResults(result.concat(json));
+            setPage(page + 1);
+            return _context.abrupt("return", json);
+
+          case 18:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee);
+  }));
+  return _getResults.apply(this, arguments);
+}
+
+function getEntity(entityTitle, callback) {
+  fetch(getServerUrl(ApiRoutes.entity) + entityTitle, {
+    method: 'GET'
+  }).then(function (results) {
+    if (results.status === 200) {
+      return results.json();
+    }
+
+    return null;
+  }).then(function (data) {
+    callback(data);
+  });
+  return true;
+}
+
+function getGraphStats() {
+  return _getGraphStats.apply(this, arguments);
+}
+
+function _getGraphStats() {
+  _getGraphStats = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+    var result;
+    return regeneratorRuntime.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            _context.next = 2;
+            return fetch(getServerUrl(ApiRoutes.status), {
+              method: 'GET'
+            });
+
+          case 2:
+            result = _context.sent;
+
+            if (!(result.status === 200)) {
+              _context.next = 7;
+              break;
+            }
+
+            return _context.abrupt("return", result.json());
+
+          case 7:
+            return _context.abrupt("return", null);
+
+          case 8:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee);
+  }));
+  return _getGraphStats.apply(this, arguments);
+}
+
+function saveEntity(entity, modifiedEntityObj, navigate) {
+  var updateUrl = getServerUrl(ApiRoutes.update);
+  var modifiedEntity = modifiedEntityObj['jsObject'];
+  var requestOptions = {
+    headers: getAuthHeaders(),
+    method: 'POST',
+    body: JSON.stringify({
+      title: entity.title,
+      entity: modifiedEntity
+    })
+  };
+  fetch(updateUrl, requestOptions).then(function (results) {
+    return results.json();
+  }, function (error) {
+    alert("error connecting to server");
+  }).then(function (data) {
+    if (data) {
+      if (data.status === 200) {
+        alert("updated successfully!");
+
+        if (entity.title !== modifiedEntity.title) {
+          navigate(AppRoutes.edit + modifiedEntity.title);
+        }
+      } else {
+        alert("Server error: error saving entity!");
+      }
+    }
+  });
+}
+
+function generateSearchQuery(searchParam) {
+  var searchUrl = getServerUrl(ApiRoutes.search);
+
+  if (searchParam.includes(":")) {
+    var searchArray = searchParam.split(":", 2);
+    searchUrl += searchArray[1] + '&categories=' + searchArray[0];
+  } else {
+    searchUrl += searchParam;
+  }
+
+  return searchUrl;
+}
+
+function getServerUrl(url) {
+  console.log(process.env.REACT_APP_SERVER_URL);
+  return process.env.REACT_APP_SERVER_URL + url;
+}
+
+var index$2 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  getServerUrl: getServerUrl,
+  generateSearchQuery: generateSearchQuery,
+  deleteEntity: deleteEntity,
+  getResults: getResults,
+  getEntity: getEntity,
+  getGraphStats: getGraphStats,
+  saveEntity: saveEntity
+});
+
+function getAuthHeaders() {
+  var token = getAuthToken();
+  return {
+    'Authorization': 'Bearer ' + (token ? token : ''),
+    'Content-Type': 'application/json'
+  };
+}
+function userIsEditAuthorized() {
+  var currentUserRole = getUserRole();
+  return currentUserRole === UserRoles.Admin || currentUserRole === UserRoles.Editor;
+}
+function validateToken(setUserState) {
+  console.log("validating token");
+  var loginUrl = getServerUrl(ApiRoutes.tokenValidation);
+  var requestOptions = {
+    headers: getAuthHeaders(),
+    method: 'GET'
+  };
+  fetch(loginUrl, requestOptions).then(function (results) {
+    return results.json();
+  }, function (error) {
+    console.log("error connecting to server");
+    return {
+      error: "server error!",
+      result: false
+    };
+  }).then(function (data) {
+    if (data.status === 200) {
+      console.log("token is valid.");
+      return {
+        error: null,
+        result: true
+      };
+    } else {
+      logout(setUserState);
+      console.log("token validation error! logging out.");
+      return {
+        error: "token validation error! logging out.",
+        result: false
+      };
+    }
+  });
+}
+
+function userLogin(_x, _x2) {
+  return _userLogin.apply(this, arguments);
+}
+
+function _userLogin() {
+  _userLogin = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(username, password) {
+    var loginUrl, requestOptions, response, result, _result$payload, _result$payload2, _result$payload3;
+
+    return regeneratorRuntime.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            if (!(username === "" || password === "")) {
+              _context.next = 2;
+              break;
+            }
+
+            return _context.abrupt("return", {
+              error: "username/password required!"
+            });
+
+          case 2:
+            loginUrl = getServerUrl(ApiRoutes.login);
+            requestOptions = {
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              method: 'POST',
+              body: JSON.stringify({
+                username: username,
+                password: password
+              })
+            };
+            _context.next = 6;
+            return fetch(loginUrl, requestOptions);
+
+          case 6:
+            response = _context.sent;
+            _context.next = 9;
+            return response.json();
+
+          case 9:
+            result = _context.sent;
+
+            if (!((result === null || result === void 0 ? void 0 : result.status) === 200)) {
+              _context.next = 15;
+              break;
+            }
+
+            setAuthUser(result === null || result === void 0 ? void 0 : (_result$payload = result.payload) === null || _result$payload === void 0 ? void 0 : _result$payload.name);
+            setAuthToken(result === null || result === void 0 ? void 0 : (_result$payload2 = result.payload) === null || _result$payload2 === void 0 ? void 0 : _result$payload2.token);
+            setUserRole(result === null || result === void 0 ? void 0 : (_result$payload3 = result.payload) === null || _result$payload3 === void 0 ? void 0 : _result$payload3.role);
+            return _context.abrupt("return", {
+              error: null,
+              result: "success"
+            });
+
+          case 15:
+            return _context.abrupt("return", {
+              error: "Login failed!",
+              result: "error"
+            });
+
+          case 16:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee);
+  }));
+  return _userLogin.apply(this, arguments);
+}
+
+function ProtectedRoute(_ref) {
+  var children = _ref.children;
+  var location = reactRouterDom.useLocation();
+
+  if (!userIsEditAuthorized()) {
+    // Redirect them to the /login page, but save the current location they were
+    // trying to go to when they were redirected. This allows us to send them
+    // along to that page after they login, which is a nicer user experience
+    // than dropping them off on the home page.
+    return /*#__PURE__*/React__default["default"].createElement(reactRouterDom.Navigate, {
+      to: AppRoutes.login,
+      state: {
+        from: location
+      },
+      replace: true
+    });
+  }
+
+  return children;
+}
+
+var index$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  getAuthHeaders: getAuthHeaders,
+  userIsEditAuthorized: userIsEditAuthorized,
+  validateToken: validateToken,
+  AuthStore: AuthStore,
+  UserRoles: UserRoles,
+  userLogin: userLogin,
+  ProtectedRoute: ProtectedRoute,
+  getAuthUser: getAuthUser,
+  setAuthUser: setAuthUser,
+  getUserRole: getUserRole,
+  setUserRole: setUserRole,
+  getAuthToken: getAuthToken,
+  setAuthToken: setAuthToken,
+  logout: logout
+});
 
 var styles = function styles(theme) {
   return {
@@ -584,13 +1054,6 @@ var Styles = function Styles(theme) {
   };
 };
 
-var api = require("../../../../src/server");
-
-var app = require("../../../../src/routes");
-
-var AppRoutes = app.AppRoutes;
-api.ApiRoutes;
-
 var MainContentItem = /*#__PURE__*/function (_Component) {
   _inherits(MainContentItem, _Component);
 
@@ -732,6 +1195,15 @@ var MainContentList = /*#__PURE__*/function (_Component) {
 
 var MainContentList$1 = styles$1.withStyles(Styles)(MainContentList);
 
-exports.FormattedContentViewer = FormattedContentViewer$1;
-exports.InfiniteList = InfiniteList;
-exports.MainContentList = MainContentList$1;
+var index = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  FormattedContentViewer: FormattedContentViewer$1,
+  InfiniteList: InfiniteList,
+  MainContentList: MainContentList$1
+});
+
+exports.ApiRoutes = ApiRoutes;
+exports.AppRoutes = AppRoutes;
+exports.auth = index$1;
+exports.components = index;
+exports.functions = index$2;
