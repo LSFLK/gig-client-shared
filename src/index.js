@@ -1,4 +1,4 @@
-export * from "./auth/index"
-export * from "./components/index"
-export * from "./functions/index"
+export * as auth from "./auth/index"
+export * as components from "./components/index"
+export * as functions from "./functions/index"
 export * from "./config"
