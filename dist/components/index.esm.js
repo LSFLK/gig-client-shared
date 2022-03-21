@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import Typography from '@mui/material/Typography';
 import { withStyles } from '@mui/styles';
 import { Button, Typography as Typography$1 } from '@mui/material';
@@ -296,9 +295,6 @@ var FormattedContentViewer = /*#__PURE__*/function (_Component) {
   return FormattedContentViewer;
 }(Component);
 
-FormattedContentViewer.propTypes = {
-  classes: PropTypes.object.isRequired
-};
 var FormattedContentViewer$1 = withStyles(styles)(FormattedContentViewer);
 
 var InfiniteList = /*#__PURE__*/function (_Component) {

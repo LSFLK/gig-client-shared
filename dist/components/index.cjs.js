@@ -3,7 +3,6 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 
 var React = require('react');
-var PropTypes = require('prop-types');
 var Typography = require('@mui/material/Typography');
 var styles$1 = require('@mui/styles');
 var material = require('@mui/material');
@@ -20,7 +19,6 @@ var Moment = require('moment');
 function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
 var React__default = /*#__PURE__*/_interopDefaultLegacy(React);
-var PropTypes__default = /*#__PURE__*/_interopDefaultLegacy(PropTypes);
 var Typography__default = /*#__PURE__*/_interopDefaultLegacy(Typography);
 var BeatLoader__default = /*#__PURE__*/_interopDefaultLegacy(BeatLoader);
 var Tooltip__default = /*#__PURE__*/_interopDefaultLegacy(Tooltip);
@@ -314,9 +312,6 @@ var FormattedContentViewer = /*#__PURE__*/function (_Component) {
   return FormattedContentViewer;
 }(React.Component);
 
-FormattedContentViewer.propTypes = {
-  classes: PropTypes__default["default"].object.isRequired
-};
 var FormattedContentViewer$1 = styles$1.withStyles(styles)(FormattedContentViewer);
 
 var InfiniteList = /*#__PURE__*/function (_Component) {

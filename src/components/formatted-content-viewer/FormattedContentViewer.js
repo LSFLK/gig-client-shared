@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import PropTypes from 'prop-types';
 import Typography from '@mui/material/Typography';
 import {withStyles} from '@mui/styles';
 
@@ -79,9 +78,5 @@ class FormattedContentViewer extends Component {
         );
     }
 }
-
-FormattedContentViewer.propTypes = {
-    classes: PropTypes.object.isRequired
-};
 
 export default withStyles(styles)(FormattedContentViewer);
