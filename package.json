@@ -4,7 +4,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
-  "version": "0.1.8",
+  "version": "0.1.9",
   "exports": {
     "./auth": {
       "import": "./dist/auth/index.esm.js"
@@ -17,8 +17,6 @@
     }
   },
   "files": "./dist",
-  "dependencies": {
-  },
   "scripts": {
     "build": "rollup -c",
     "build-watch": "rollup -c -w",
@@ -53,6 +51,7 @@
     "npm-run-all": "^4.1.5",
     "rollup": "^2.70.1",
     "rollup-plugin-delete": "^2.0.0",
+    "rollup-plugin-img": "^1.1.0",
     "rollup-plugin-peer-deps-external": "^2.2.4"
   },
   "peerDependencies": {

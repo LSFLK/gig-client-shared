@@ -1,6 +1,7 @@
 import babel from '@rollup/plugin-babel';
 import external from 'rollup-plugin-peer-deps-external';
 import del from 'rollup-plugin-delete';
+import image from 'rollup-plugin-img';
 import pkg from './package.json';
 
 export default [
@@ -11,6 +12,9 @@ export default [
             {file: "dist/auth/index.esm.js", format: 'esm'}
         ],
         plugins: [
+            image({
+                limit: 10000
+            }),
             external(),
             babel({
                 exclude: 'node_modules/**',
@@ -27,6 +31,9 @@ export default [
             {file: "dist/components/index.esm.js", format: 'esm'}
         ],
         plugins: [
+            image({
+                limit: 10000
+            }),
             external(),
             babel({
                 exclude: 'node_modules/**',
@@ -43,6 +50,9 @@ export default [
             {file: "dist/functions/index.esm.js", format: 'esm'}
         ],
         plugins: [
+            image({
+                limit: 10000
+            }),
             external(),
             babel({
                 exclude: 'node_modules/**',

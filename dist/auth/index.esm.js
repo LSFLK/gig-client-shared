@@ -152,7 +152,6 @@ var AppRoutes = app.AppRoutes;
 var ApiRoutes = api.ApiRoutes;
 
 function getServerUrl(url) {
-  console.log(process.env.REACT_APP_SERVER_URL);
   return process.env.REACT_APP_SERVER_URL + url;
 }
 
