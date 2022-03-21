@@ -4,7 +4,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
-  "version": "0.0.2",
+  "version": "0.0.3",
   "files":"./dist",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
