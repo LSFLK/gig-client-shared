@@ -1,11 +1,13 @@
 'use strict';
 
+Object.defineProperty(exports, '__esModule', { value: true });
+
 var React = require('react');
 var Typography = require('@mui/material/Typography');
 var styles$1 = require('@mui/styles');
 var material = require('@mui/material');
-require('react-spinners/BeatLoader');
-require('@mui/material/Tooltip/Tooltip');
+var BeatLoader = require('react-spinners/BeatLoader');
+var Tooltip = require('@mui/material/Tooltip/Tooltip');
 var List = require('@mui/material/List/List');
 var Grid = require('@mui/material/Grid/Grid');
 var ListItem = require('@mui/material/ListItem/ListItem');
@@ -18,12 +20,50 @@ function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'defau
 
 var React__default = /*#__PURE__*/_interopDefaultLegacy(React);
 var Typography__default = /*#__PURE__*/_interopDefaultLegacy(Typography);
+var BeatLoader__default = /*#__PURE__*/_interopDefaultLegacy(BeatLoader);
+var Tooltip__default = /*#__PURE__*/_interopDefaultLegacy(Tooltip);
 var List__default = /*#__PURE__*/_interopDefaultLegacy(List);
 var Grid__default = /*#__PURE__*/_interopDefaultLegacy(Grid);
 var ListItem__default = /*#__PURE__*/_interopDefaultLegacy(ListItem);
 var Paper__default = /*#__PURE__*/_interopDefaultLegacy(Paper);
 var Chip__default = /*#__PURE__*/_interopDefaultLegacy(Chip);
 var Moment__default = /*#__PURE__*/_interopDefaultLegacy(Moment);
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
+  try {
+    var info = gen[key](arg);
+    var value = info.value;
+  } catch (error) {
+    reject(error);
+    return;
+  }
+
+  if (info.done) {
+    resolve(value);
+  } else {
+    Promise.resolve(value).then(_next, _throw);
+  }
+}
+
+function _asyncToGenerator(fn) {
+  return function () {
+    var self = this,
+        args = arguments;
+    return new Promise(function (resolve, reject) {
+      var gen = fn.apply(self, args);
+
+      function _next(value) {
+        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);
+      }
+
+      function _throw(err) {
+        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);
+      }
+
+      _next(undefined);
+    });
+  };
+}
 
 function _classCallCheck(instance, Constructor) {
   if (!(instance instanceof Constructor)) {
@@ -272,7 +312,114 @@ var FormattedContentViewer = /*#__PURE__*/function (_Component) {
   return FormattedContentViewer;
 }(React.Component);
 
-styles$1.withStyles(styles)(FormattedContentViewer);
+var FormattedContentViewer$1 = styles$1.withStyles(styles)(FormattedContentViewer);
+
+var InfiniteList = /*#__PURE__*/function (_Component) {
+  _inherits(InfiniteList, _Component);
+
+  var _super = _createSuper(InfiniteList);
+
+  function InfiniteList(props) {
+    var _this;
+
+    _classCallCheck(this, InfiniteList);
+
+    _this = _super.call(this, props);
+    _this.state = {
+      isLoading: false,
+      listEnded: false
+    };
+    _this.loadResults = _this.loadResults.bind(_assertThisInitialized(_this));
+    return _this;
+  }
+
+  _createClass(InfiniteList, [{
+    key: "loadResults",
+    value: function () {
+      var _loadResults = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+        var results;
+        return regeneratorRuntime.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                this.setState({
+                  isLoading: true
+                });
+                _context.next = 3;
+                return this.props.getResultItems();
+
+              case 3:
+                results = _context.sent;
+
+                if (!results) {
+                  this.setState({
+                    isLoading: false,
+                    listEnded: true
+                  });
+                } else {
+                  this.setState({
+                    isLoading: false
+                  });
+                }
+
+              case 5:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee, this);
+      }));
+
+      function loadResults() {
+        return _loadResults.apply(this, arguments);
+      }
+
+      return loadResults;
+    }()
+  }, {
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      var _this$props = this.props,
+          listItems = _this$props.listItems,
+          list = _this$props.list;
+      var _this$state = this.state,
+          isLoading = _this$state.isLoading,
+          listEnded = _this$state.listEnded;
+      return /*#__PURE__*/React__default["default"].createElement("div", null, list, Array.isArray(listItems) && /*#__PURE__*/React__default["default"].createElement("div", {
+        style: {
+          textAlign: 'center'
+        }
+      }, isLoading && /*#__PURE__*/React__default["default"].createElement(BeatLoader__default["default"], {
+        sizeUnit: "px",
+        size: 14,
+        color: '#36D7B7',
+        loading: this.props.loading
+      }), !(isLoading || listEnded) ? /*#__PURE__*/React__default["default"].createElement(Tooltip__default["default"], {
+        title: 'view more',
+        "aria-label": "add"
+      }, /*#__PURE__*/React__default["default"].createElement(material.Button, {
+        style: {
+          width: "100%"
+        },
+        onClick: function onClick() {
+          return _this2.loadResults();
+        }
+      }, /*#__PURE__*/React__default["default"].createElement("img", {
+        alt: "view more",
+        width: "15px",
+        src: "./resources/down.png"
+      }))) : /*#__PURE__*/React__default["default"].createElement(material.Button, {
+        style: {
+          width: "100%"
+        }
+      }, " ")));
+    }
+  }]);
+
+  return InfiniteList;
+}(React.Component);
 
 var Styles = function Styles(theme) {
   return {
@@ -578,4 +725,8 @@ var MainContentList = /*#__PURE__*/function (_Component) {
   return MainContentList;
 }(React.Component);
 
-styles$1.withStyles(Styles)(MainContentList);
+var MainContentList$1 = styles$1.withStyles(Styles)(MainContentList);
+
+exports.FormattedContentViewer = FormattedContentViewer$1;
+exports.InfiniteList = InfiniteList;
+exports.MainContentList = MainContentList$1;
