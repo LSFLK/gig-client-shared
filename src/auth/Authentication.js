@@ -1,7 +1,6 @@
 import {getAuthToken, getUserRole, logout} from "./User";
 import {UserRoles} from "./AuthStore";
-import {ApiRoutes} from "../config";
-import {getServerUrl} from "../functions/index"
+import {ApiRoutes, getServerUrl} from "../routes/routes";
 
 export function getAuthHeaders() {
     const token = getAuthToken();

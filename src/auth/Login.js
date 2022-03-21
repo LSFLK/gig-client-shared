@@ -1,6 +1,5 @@
 import {setAuthToken, setAuthUser, setUserRole} from "./User";
-import {ApiRoutes} from "../config";
-import {getServerUrl} from "../functions/index"
+import {ApiRoutes} from "../routes/routes";
 
 export async function userLogin(username, password) {
     if (username === "" || password === "") {

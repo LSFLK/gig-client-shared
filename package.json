@@ -4,8 +4,11 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
-  "version": "0.1.9",
+  "version": "0.2.0",
   "exports": {
+    "./routes": {
+      "import": "./dist/routes/index.esm.js"
+    },
     "./auth": {
       "import": "./dist/auth/index.esm.js"
     },

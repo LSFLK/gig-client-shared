@@ -1,5 +1,4 @@
-import {ApiRoutes} from "../../config";
-import {getServerUrl} from "../index"
+import {ApiRoutes, getServerUrl} from "../../routes/routes";
 
 export function deleteEntity(entity, navigate) {
     let isConfirmed = window.confirm("Are you sure you want to delete this entity?");

@@ -152,14 +152,23 @@ function logout(setUserState) {
   }
 }
 
-var api = require("../../../../../src/server");
+var app = require("../../../../../../src/routes"); //parent project root directory
 
-var app = require("../../../../../src/routes");
 
 var AppRoutes = app.AppRoutes;
-var ApiRoutes = api.ApiRoutes;
-
-function getServerUrl(url) {
+var ApiRoutes = {
+  tokenValidation: 'api/token/validate',
+  images: 'images',
+  login: 'api/user/login',
+  delete: 'api/delete',
+  update: 'api/update',
+  search: 'api/search?query=',
+  entity: 'api/get/',
+  status: 'api/status/',
+  links: 'api/links/',
+  relations: 'api/relations/'
+};
+function getServerUrl$1(url) {
   return process.env.REACT_APP_SERVER_URL + url;
 }
 
@@ -176,7 +185,7 @@ function userIsEditAuthorized() {
 }
 function validateToken(setUserState) {
   console.log("validating token");
-  var loginUrl = getServerUrl(ApiRoutes.tokenValidation);
+  var loginUrl = getServerUrl$1(ApiRoutes.tokenValidation);
   var requestOptions = {
     headers: getAuthHeaders(),
     method: 'GET'

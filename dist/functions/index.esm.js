@@ -1,9 +1,22 @@
-var api = require("../../../../../src/server");
+var app = require("../../../../../../src/routes"); //parent project root directory
 
-var app = require("../../../../../src/routes");
 
 var AppRoutes = app.AppRoutes;
-var ApiRoutes = api.ApiRoutes;
+var ApiRoutes = {
+  tokenValidation: 'api/token/validate',
+  images: 'images',
+  login: 'api/user/login',
+  delete: 'api/delete',
+  update: 'api/update',
+  search: 'api/search?query=',
+  entity: 'api/get/',
+  status: 'api/status/',
+  links: 'api/links/',
+  relations: 'api/relations/'
+};
+function getServerUrl(url) {
+  return process.env.REACT_APP_SERVER_URL + url;
+}
 
 function deleteEntity(entity, navigate) {
   var isConfirmed = window.confirm("Are you sure you want to delete this entity?");
@@ -244,8 +257,4 @@ function generateSearchQuery(searchParam) {
   return searchUrl;
 }
 
-function getServerUrl(url) {
-  return process.env.REACT_APP_SERVER_URL + url;
-}
-
-export { deleteEntity, generateSearchQuery, getEntity, getGraphStats, getResults, getServerUrl, saveEntity };
+export { deleteEntity, generateSearchQuery, getEntity, getGraphStats, getResults, saveEntity };

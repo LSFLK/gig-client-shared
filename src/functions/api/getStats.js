@@ -1,5 +1,4 @@
-import {ApiRoutes} from "../../config";
-import {getServerUrl} from "../index";
+import {ApiRoutes, getServerUrl} from "../../routes/routes";
 
 export async function getGraphStats() {
     const result = await fetch(getServerUrl(ApiRoutes.status), {method: 'GET'});

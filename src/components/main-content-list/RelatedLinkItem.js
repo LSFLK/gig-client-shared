@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 import Avatar from "@mui/material/Avatar/Avatar";
 import Grid from "@mui/material/Grid/Grid";
 import Tooltip from '@mui/material/Tooltip';
-import {AppRoutes} from "../../config";
+import {AppRoutes} from "../../routes/routes";
 
 class RelatedLinkItem extends Component {
 
@@ -23,7 +23,7 @@ class RelatedLinkItem extends Component {
     }
 
     getImage(title) {
-        let searchUrl = process.env.REACT_APP_SERVER_URL + "api/get/" + title + "?imageOnly=true";
+        let searchUrl = process.env.REACT_APP_SERVER_URL + AppRoutes.entity + title + "?imageOnly=true";
         fetch(searchUrl, {
             method: 'GET'
         }).then(results => {

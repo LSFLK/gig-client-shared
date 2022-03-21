@@ -6,6 +6,25 @@ import pkg from './package.json';
 
 export default [
     {
+        input: "src/routes/index.js",
+        output: [
+            {file: "dist/routes/index.cjs.js", format: 'cjs'},
+            {file: "dist/routes/index.esm.js", format: 'esm'}
+        ],
+        plugins: [
+            image({
+                limit: 10000
+            }),
+            external(),
+            babel({
+                exclude: 'node_modules/**',
+                babelHelpers: 'bundled'
+            }),
+            del({targets: ['dist/routes/*']}),
+        ],
+        external: Object.keys(pkg.peerDependencies || {})
+    },
+    {
         input: "src/auth/index.js",
         output: [
             {file: "dist/auth/index.cjs.js", format: 'cjs'},

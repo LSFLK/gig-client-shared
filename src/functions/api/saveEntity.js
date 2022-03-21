@@ -1,6 +1,5 @@
 import {getAuthHeaders} from "../../auth/Authentication";
-import {ApiRoutes, AppRoutes} from "../../config";
-import {getServerUrl} from "../index";
+import {ApiRoutes, AppRoutes, getServerUrl} from "../../routes/routes";
 
 export function saveEntity(entity, modifiedEntityObj, navigate) {
     let updateUrl = getServerUrl(ApiRoutes.update);

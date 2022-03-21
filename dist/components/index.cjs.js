@@ -581,12 +581,10 @@ var Styles = function Styles(theme) {
   };
 };
 
-var api = require("../../../../../src/server");
+var app = require("../../../../../../src/routes"); //parent project root directory
 
-var app = require("../../../../../src/routes");
 
 var AppRoutes = app.AppRoutes;
-api.ApiRoutes;
 
 var MainContentItem = /*#__PURE__*/function (_Component) {
   _inherits(MainContentItem, _Component);
