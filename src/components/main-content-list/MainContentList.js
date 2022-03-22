@@ -10,7 +10,7 @@ class MainContentList extends Component {
 
     render() {
         const {classes, listItems, vertical} = this.props;
-        if (listItems.length === 0) {
+        if (listItems?.length === 0) {
             return <Typography component="p" style={{textAlign: 'center'}}>
                 No Results Found
             </Typography>
