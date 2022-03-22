@@ -69,12 +69,11 @@ class FormattedContentViewer extends Component {
     }
 
     render() {
-        const {content} = this.props;
+        const {content, key} = this.props;
         return (
-            <tr key={content.name}>
-                <td><Typography>{content.name !== "" ? content.name + ": " : ""}</Typography></td>
-                <td>{this.formatValues(content.values)}</td>
-            </tr>
+            <div className={"mainContent"} key={key}>
+                {this.formatValues(content)}
+            </div>
         );
     }
 }

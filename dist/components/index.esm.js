@@ -285,10 +285,13 @@ var FormattedContentViewer = /*#__PURE__*/function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      var content = this.props.content;
-      return /*#__PURE__*/React.createElement("tr", {
-        key: content.name
-      }, /*#__PURE__*/React.createElement("td", null, /*#__PURE__*/React.createElement(Typography, null, content.name !== "" ? content.name + ": " : "")), /*#__PURE__*/React.createElement("td", null, this.formatValues(content.values)));
+      var _this$props = this.props,
+          content = _this$props.content,
+          key = _this$props.key;
+      return /*#__PURE__*/React.createElement("div", {
+        className: "mainContent",
+        key: key
+      }, this.formatValues(content));
     }
   }]);
 

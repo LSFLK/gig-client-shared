@@ -302,10 +302,13 @@ var FormattedContentViewer = /*#__PURE__*/function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      var content = this.props.content;
-      return /*#__PURE__*/React__default["default"].createElement("tr", {
-        key: content.name
-      }, /*#__PURE__*/React__default["default"].createElement("td", null, /*#__PURE__*/React__default["default"].createElement(Typography__default["default"], null, content.name !== "" ? content.name + ": " : "")), /*#__PURE__*/React__default["default"].createElement("td", null, this.formatValues(content.values)));
+      var _this$props = this.props,
+          content = _this$props.content,
+          key = _this$props.key;
+      return /*#__PURE__*/React__default["default"].createElement("div", {
+        className: "mainContent",
+        key: key
+      }, this.formatValues(content));
     }
   }]);
 
