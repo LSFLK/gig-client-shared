@@ -1,4 +1,7 @@
-export async function getResults(searchUrl, newSearch, result, page, setResults, setPage, limit) {
+import {generateSearchQuery} from "../generateSearchQuery";
+
+export async function getResults(searchParam, newSearch, result, page, setResults, setPage, limit) {
+    let searchUrl = generateSearchQuery(searchParam);
     searchUrl += '&limit=' + limit + '&page=' + (newSearch ? 1 : (page + 1));
     const response = await fetch(searchUrl, {method: 'GET'});
 
