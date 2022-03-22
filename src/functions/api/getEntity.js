@@ -6,7 +6,7 @@ export async function getEntity(entityTitle, callback) {
     if (response?.status !== 200) {
         return null
     }
-    let data = response.json();
+    let data = await response.json();
     callback(data);
     return data
 }

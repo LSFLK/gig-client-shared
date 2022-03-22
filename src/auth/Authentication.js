@@ -1,6 +1,5 @@
-import {getAuthToken, getUserRole, logout} from "./User";
+import {getAuthToken, getUserRole} from "./User";
 import {UserRoles} from "./AuthStore";
-import {ApiRoutes, getServerUrl} from "../routes/Routes";
 
 export function getAuthHeaders() {
     const token = getAuthToken();
@@ -10,30 +9,4 @@ export function getAuthHeaders() {
 export function userIsEditAuthorized() {
     const currentUserRole = getUserRole();
     return currentUserRole === UserRoles.Admin || currentUserRole === UserRoles.Editor;
-}
-
-export function validateToken(setUserState) {
-    console.log("validating token");
-    let loginUrl = getServerUrl(ApiRoutes.tokenValidation);
-
-    const requestOptions = {
-        headers: getAuthHeaders(),
-        method: 'GET',
-    };
-    fetch(loginUrl, requestOptions).then(results => {
-        return results.json();
-    }, error => {
-        console.log("error connecting to server");
-        return {error: "server error!", result: false}
-    }).then(data => {
-        if (data.status === 200) {
-            console.log("token is valid.");
-            return {error: null, result: true}
-        }
-        else {
-            logout(setUserState);
-            console.log("token validation error! logging out.");
-            return {error: "token validation error! logging out.", result: false}
-        }
-    });
 }
