@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import Typography from '@mui/material/Typography';
 import {withStyles} from '@mui/styles';
+import {ValueTypes} from '../../constants/ValueTypes'
 
 const styles = theme => ({
     container: {
@@ -34,11 +35,11 @@ class FormattedContentViewer extends Component {
 
     formatValue(value) {
         switch (value.value_type) {
-            case "date":
+            case ValueTypes.Date:
                 return this.formatDate(value.value_string);
-            case "wikiText":
+            case ValueTypes.WikipediaText:
                 return this.formatWikiText(value.value_string);
-            case "html":
+            case ValueTypes.HTML:
                 return this.viewAsHTML(value.value_string);
             default:
                 return <Typography key={value.value_string + value.date}>{value.value_string.split('\n').map(item => {

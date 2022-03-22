@@ -12,18 +12,17 @@ export const ApiRoutes = {
     links: 'api/links/',
     relations: 'api/relations/',
     add: '/api/add',
-    add_batch: '/api/add-batch',
+    addBatch: '/api/add-batch',
     delete: 'api/delete',
     update: 'api/update',
     terminate: '/api/terminate',
     upload: '/api/upload',
-    normalize_location: '/api/normalize/location',
-    normalize_name: '/api/normalize/name',
+    normalizeLocation: '/api/normalize/location',
+    normalizeName: '/api/normalize/name',
     normalize: '/api/normalize',
-    user_register: '/api/user/register',
-    reader_register: '/api/reader/register',
-    publish_twitter: '/api/publish/twitter'
-
+    userRegister: '/api/user/register',
+    readerRegister: '/api/reader/register',
+    publishTwitter: '/api/publish/twitter'
 };
 
 export function getServerUrl(url) {

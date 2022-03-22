@@ -1,4 +1,4 @@
-import {ApiRoutes, getServerUrl} from "../routes/routes";
+import {ApiRoutes, getServerUrl} from "../routes/Routes";
 
 export function generateSearchQuery(searchParam) {
     let searchUrl = getServerUrl(ApiRoutes.search);

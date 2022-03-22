@@ -189,6 +189,15 @@ function _createSuper(Derived) {
   };
 }
 
+var ValueTypes = {
+  String: "string",
+  Date: "date",
+  WikipediaText: "wikiText",
+  JSON: "json",
+  ObjectId: "objectId",
+  HTML: "html"
+};
+
 var styles = function styles(theme) {
   return {
     container: {
@@ -236,13 +245,13 @@ var FormattedContentViewer = /*#__PURE__*/function (_Component) {
     key: "formatValue",
     value: function formatValue(value) {
       switch (value.value_type) {
-        case "date":
+        case ValueTypes.Date:
           return this.formatDate(value.value_string);
 
-        case "wikiText":
+        case ValueTypes.WikipediaText:
           return this.formatWikiText(value.value_string);
 
-        case "html":
+        case ValueTypes.HTML:
           return this.viewAsHTML(value.value_string);
 
         default:

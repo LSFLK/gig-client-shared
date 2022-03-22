@@ -6,6 +6,25 @@ import pkg from './package.json';
 
 export default [
     {
+        input: "src/constants/index.js",
+        output: [
+            {file: "dist/constants/index.cjs.js", format: 'cjs'},
+            {file: "dist/constants/index.esm.js", format: 'esm'}
+        ],
+        plugins: [
+            image({
+                limit: 10000
+            }),
+            external(),
+            babel({
+                exclude: 'node_modules/**',
+                babelHelpers: 'bundled'
+            }),
+            del({targets: ['dist/constants/*']}),
+        ],
+        external: Object.keys(pkg.peerDependencies || {})
+    },
+    {
         input: "src/routes/index.js",
         output: [
             {file: "dist/routes/index.cjs.js", format: 'cjs'},

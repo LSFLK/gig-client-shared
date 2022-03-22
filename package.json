@@ -6,6 +6,9 @@
   },
   "version": "0.2.2",
   "exports": {
+    "./constants": {
+      "import": "./dist/constants/index.esm.js"
+    },
     "./routes": {
       "import": "./dist/routes/index.esm.js"
     },

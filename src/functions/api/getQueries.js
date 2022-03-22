@@ -1,4 +1,4 @@
-import {ApiRoutes, getServerUrl} from "../../routes/routes";
+import {ApiRoutes, getServerUrl} from "../../routes/Routes";
 
 export async function getResults(searchUrl, newSearch, result, page, setResults, setPage, limit) {
     searchUrl += '&limit=' + limit + '&page=' + (newSearch ? 1 : (page + 1));

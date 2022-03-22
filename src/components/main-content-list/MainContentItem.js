@@ -8,7 +8,7 @@ import {Link} from "react-router-dom";
 import Paper from '@mui/material/Paper';
 import Chip from '@mui/material/Chip';
 import moment from 'moment';
-import {AppRoutes} from "../../routes/routes";
+import {AppRoutes} from "../../routes/Routes";
 
 class MainContentItem extends Component {
 
