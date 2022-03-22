@@ -11,10 +11,14 @@ export async function getResults(searchUrl, newSearch, result, page, setResults,
         if (newSearch) {
             setResults(json);
             setPage(1);
+            return json
         } else {
             setResults(result.concat(json));
             setPage(page + 1);
+            return json
         }
     }
+    setResults([]);
+    setPage(1);
     return json
 }
