@@ -1,4 +1,5 @@
 export {deleteEntity} from "./deleteEntity";
-export {getResults, getEntity} from "./getQueries";
+export {getEntity} from "./getEntity";
+export {getResults} from "./getResults";
 export {getGraphStats} from "./getStats";
 export {saveEntity} from "./saveEntity";
