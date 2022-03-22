@@ -8,7 +8,7 @@ export async function getResults(searchUrl, newSearch, result, page, setResults,
     const json = await response.json();
 
     if (json) {
-        if (newSearch || result == null) {
+        if (newSearch) {
             setResults(json);
             setPage(1);
         } else {
