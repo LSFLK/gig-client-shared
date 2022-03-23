@@ -5,15 +5,16 @@ import Styles from "./Styles"
 import List from "@mui/material/List/List";
 import MainContentItem from "./MainContentItem";
 import Moment from 'moment';
+import {Facebook} from 'react-content-loader'
 
 class MainContentList extends Component {
 
     render() {
         const {classes, listItems, vertical} = this.props;
         if (listItems?.length === 0) {
-            return <Typography component="p" style={{textAlign: 'center'}}>
+            return <Paper elevation={3}><Typography component="p" style={{textAlign: 'center'}}>
                 No Results Found
-            </Typography>
+            </Typography></Paper>
         }
         if (listItems) {
             return (
@@ -34,9 +35,11 @@ class MainContentList extends Component {
             )
         }
         return (
-            <Typography component="p" style={{textAlign: 'center'}}>
-                Loading Results...
-            </Typography>
+            <Paper elevation={3}>
+                <Typography component="p" style={{textAlign: 'center'}}>
+                    <Facebook/>
+                </Typography>
+            </Paper>
         )
 
     }
