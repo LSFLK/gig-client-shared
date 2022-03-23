@@ -13,7 +13,8 @@ class MainContentList extends Component {
     render() {
         const {classes, listItems, vertical} = this.props;
         if (listItems?.length === 0) {
-            return <Paper elevation={3}><Typography component="p" style={{textAlign: 'center'}}>
+            return <Paper className={classes.paper} elevation={3}><Typography component="p"
+                                                                              style={{textAlign: 'center'}}>
                 No Results Found
             </Typography></Paper>
         }
@@ -36,11 +37,28 @@ class MainContentList extends Component {
             )
         }
         return (
-            <Paper elevation={3}>
-                <Typography component="p" style={{textAlign: 'center'}}>
-                    <Facebook/>
-                </Typography>
-            </Paper>
+            <>
+                <Paper className={classes.paper}>
+                    <Typography component="p" style={{textAlign: 'center'}}>
+                        <Facebook/>
+                    </Typography>
+                </Paper>
+                <Paper className={classes.paper}>
+                    <Typography component="p" style={{textAlign: 'center'}}>
+                        <Facebook/>
+                    </Typography>
+                </Paper>
+                <Paper className={classes.paper}>
+                    <Typography component="p" style={{textAlign: 'center'}}>
+                        <Facebook/>
+                    </Typography>
+                </Paper>
+                <Paper className={classes.paper}>
+                    <Typography component="p" style={{textAlign: 'center'}}>
+                        <Facebook/>
+                    </Typography>
+                </Paper>
+            </>
         )
 
     }
