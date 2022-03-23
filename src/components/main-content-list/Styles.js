@@ -25,7 +25,7 @@ const Styles = theme => ({
             },
             paper: {
                 margin: theme.spacing(2),
-                padding: 0,
+                padding: '15px',
                 textAlign: 'left',
                 color: theme.palette.text.primary,
                 boxShadow: '0px 3px 6px #00000029',
