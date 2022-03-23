@@ -8,8 +8,7 @@ export default [
     {
         input: "src/constants/index.js",
         output: [
-            {file: "dist/constants/index.cjs.js", format: 'cjs'},
-            {file: "dist/constants/index.esm.js", format: 'esm'}
+            {file: "dist/constants/index.js", format: 'esm'}
         ],
         plugins: [
             image({
@@ -27,8 +26,7 @@ export default [
     {
         input: "src/routes/index.js",
         output: [
-            {file: "dist/routes/index.cjs.js", format: 'cjs'},
-            {file: "dist/routes/index.esm.js", format: 'esm'}
+            {file: "dist/routes/index.js", format: 'esm'}
         ],
         plugins: [
             image({
@@ -46,8 +44,7 @@ export default [
     {
         input: "src/auth/index.js",
         output: [
-            {file: "dist/auth/index.cjs.js", format: 'cjs'},
-            {file: "dist/auth/index.esm.js", format: 'esm'}
+            {file: "dist/auth/index.js", format: 'esm'}
         ],
         plugins: [
             image({
@@ -65,8 +62,7 @@ export default [
     {
         input: "src/components/index.js",
         output: [
-            {file: "dist/components/index.cjs.js", format: 'cjs'},
-            {file: "dist/components/index.esm.js", format: 'esm'}
+            {file: "dist/components/index.js", format: 'esm'}
         ],
         plugins: [
             image({
@@ -84,8 +80,7 @@ export default [
     {
         input: "src/functions/index.js",
         output: [
-            {file: "dist/functions/index.cjs.js", format: 'cjs'},
-            {file: "dist/functions/index.esm.js", format: 'esm'}
+            {file: "dist/functions/index.js", format: 'esm'}
         ],
         plugins: [
             image({
