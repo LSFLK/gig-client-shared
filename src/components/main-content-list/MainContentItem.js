@@ -14,9 +14,9 @@ class MainContentItem extends Component {
 
     render() {
         const ignoreCategories = ["News", "PERSON", "ORGANIZATION", "LOCATION", "arbitrary-entities", "OrgChart-Level1"];
-        const {classes, imageUrl, title, subtitle, description, categories} = this.props;
+        const {classes, imageUrl, title, subtitle, description, categories, elevation} = this.props;
         return (
-            <Paper className={classes.paper}>
+            <Paper className={classes.paper} elevation={elevation}>
                 <ListItem alignItems="flex-start">
                     <Grid container width={1}>
                         <Grid item lg={5}>
@@ -26,7 +26,7 @@ class MainContentItem extends Component {
                             </Link>
                         </Grid>
                         <Grid item lg={7}>
-                            <div style={{padding: '20px'}}>
+                            <div style={{paddingLeft: '20px'}}>
                                 <Link className={classes.itemLink} to={AppRoutes.entity + title}>
                                     <Typography className={classes.mainContentItemTitle} variant='h4'><span
                                         className={"news-title"}>{title}</span></Typography>

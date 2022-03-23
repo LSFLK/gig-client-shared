@@ -25,11 +25,9 @@ const Styles = theme => ({
             },
             paper: {
                 margin: theme.spacing(2),
-                padding: '15px',
+                padding: '20px',
                 textAlign: 'left',
                 color: theme.palette.text.primary,
-                boxShadow: '0px 3px 6px #00000029',
-                borderRadius: 16,
             },
             profilePaper: {
                 margin: theme.spacing(2),

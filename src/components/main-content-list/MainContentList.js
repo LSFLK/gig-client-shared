@@ -11,7 +11,7 @@ import Paper from '@mui/material/Paper';
 class MainContentList extends Component {
 
     render() {
-        const {classes, listItems, vertical} = this.props;
+        const {classes, listItems, vertical, elevation} = this.props;
         if (listItems?.length === 0) {
             return <Paper className={classes.paper} elevation={3}><Typography component="p"
                                                                               style={{textAlign: 'center'}}>
@@ -31,6 +31,7 @@ class MainContentList extends Component {
                                          links={entity.links.slice(0, 20)}
                                          categories={entity.categories}
                                          vertical={vertical}
+                                         elevation={elevation}
                         />
                     ))}
                 </List>
