@@ -4,7 +4,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
-  "version": "0.3.4",
+  "version": "0.3.6",
   "exports": {
     "./constants": "./constants/index.js",
     "./routes": "./routes/index.js",

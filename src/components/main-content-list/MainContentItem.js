@@ -16,7 +16,7 @@ class MainContentItem extends Component {
         const ignoreCategories = ["News", "PERSON", "ORGANIZATION", "LOCATION", "arbitrary-entities", "OrgChart-Level1"];
         const {classes, imageUrl, title, subtitle, description, categories, elevation} = this.props;
         return (
-            <Paper className={classes.paper} elevation={elevation}>
+            <Paper className={classes.paper} elevation={elevation ? elevation : 3}>
                 <ListItem alignItems="flex-start">
                     <Grid container width={1}>
                         <Grid item lg={5}>
