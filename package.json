@@ -4,23 +4,13 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
-  "version": "0.3.0",
+  "version": "0.3.2",
   "exports": {
-    "./constants": {
-      "import": "./dist/constants/index.esm.js"
-    },
-    "./routes": {
-      "import": "./dist/routes/index.esm.js"
-    },
-    "./auth": {
-      "import": "./dist/auth/index.esm.js"
-    },
-    "./components": {
-      "import": "./dist/components/index.esm.js"
-    },
-    "./functions": {
-      "import": "./dist/functions/index.esm.js"
-    }
+    "./constants": "./dist/constants/index.js",
+    "./routes": "./dist/routes/index.js",
+    "./auth": "./dist/auth/index.js",
+    "./components": "./dist/components/index.js",
+    "./functions": "./dist/functions/index.js"
   },
   "files": "./dist",
   "scripts": {
