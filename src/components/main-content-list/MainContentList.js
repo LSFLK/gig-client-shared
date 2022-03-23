@@ -5,7 +5,8 @@ import Styles from "./Styles"
 import List from "@mui/material/List/List";
 import MainContentItem from "./MainContentItem";
 import Moment from 'moment';
-import {Facebook} from 'react-content-loader'
+import {Facebook} from 'react-content-loader';
+import Paper from '@mui/material/Paper';
 
 class MainContentList extends Component {
 
