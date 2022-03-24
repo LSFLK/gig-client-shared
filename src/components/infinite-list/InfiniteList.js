@@ -1,8 +1,8 @@
 import React, {Component} from "react";
 import {Button} from "@mui/material";
 import BeatLoader from "react-spinners/BeatLoader";
-import Tooltip from "@mui/material/Tooltip";
 import downArrow from "./resources/down.png"
+import Tooltip from '@mui/material/Tooltip';
 
 class InfiniteList extends Component {
 
@@ -46,14 +46,12 @@ class InfiniteList extends Component {
                         color={'#36D7B7'}
                         loading={this.props.loading}
                     />}
-                    {!(isLoading || listEnded) ?
-                        <Tooltip title={'view more'} aria-label="add">
-                            <Button style={{width: "100%"}} onClick={() => this.loadResults()}><img alt={"view more"}
-                                                                                                    width={"15px"}
-                                                                                                    src={downArrow}/></Button>
-                        </Tooltip>
-                        : <Button style={{width: "100%"}}> </Button>
-                    }
+                    {listItems?.length > 0 && !isLoading &&
+                    <Tooltip title={'view more'} aria-label="add">
+                        <Button style={{width: "100%"}} onClick={() => this.loadResults()}><img alt={"view more"}
+                                                                                                width={"15px"}
+                                                                                                src={downArrow}/></Button>
+                    </Tooltip>}
                 </div>}
             </div>
         )
