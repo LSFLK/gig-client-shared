@@ -11,18 +11,18 @@ export const ApiRoutes = {
     entity: 'api/get/',
     links: 'api/links/',
     relations: 'api/relations/',
-    add: '/api/add',
-    addBatch: '/api/add-batch',
+    add: 'api/add',
+    addBatch: 'api/add-batch',
     delete: 'api/delete',
     update: 'api/update',
-    terminate: '/api/terminate',
-    upload: '/api/upload',
-    normalizeLocation: '/api/normalize/location',
-    normalizeName: '/api/normalize/name',
-    normalize: '/api/normalize',
-    userRegister: '/api/user/register',
-    readerRegister: '/api/reader/register',
-    publishTwitter: '/api/publish/twitter'
+    terminate: 'api/terminate',
+    upload: 'api/upload',
+    normalizeLocation: 'api/normalize/location',
+    normalizeName: 'api/normalize/name',
+    normalize: 'api/normalize',
+    userRegister: 'api/user/register',
+    readerRegister: 'api/reader/register',
+    publishTwitter: 'api/publish/twitter'
 };
 
 export function getServerUrl(url) {
