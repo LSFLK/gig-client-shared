@@ -2,8 +2,8 @@ import React, {Component} from "react";
 import {withStyles} from "@mui/styles";
 import Typography from '@mui/material/Typography';
 import Styles from "./Styles"
-import Grid from "@mui/material/Grid/Grid";
-import ListItem from "@mui/material/ListItem/ListItem";
+import Grid from "@mui/material/Grid";
+import ListItem from "@mui/material/ListItem";
 import {Link} from "react-router-dom";
 import Paper from '@mui/material/Paper';
 import Chip from '@mui/material/Chip';

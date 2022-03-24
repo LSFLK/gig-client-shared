@@ -10,8 +10,8 @@ const styles = theme => ({
         padding: '10px'
     },
     searchResult: {
-        paddingTop: theme.spacing(2),
-        paddingBottom: theme.spacing(2),
+        paddingTop: "16px",
+        paddingBottom: "16px",
         color: 'black',
         textAlign: 'left',
         margin: '10px',

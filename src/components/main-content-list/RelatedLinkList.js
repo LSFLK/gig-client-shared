@@ -1,9 +1,9 @@
 import React, {Component} from "react";
-import Grid from "@mui/material/Grid/Grid";
+import Grid from "@mui/material/Grid";
 import RelatedLinkItem from "./RelatedLinkItem";
-import Typography from "@mui/material/Typography/Typography";
-import Avatar from "@mui/material/Avatar/Avatar";
-import Tooltip from "@mui/material/Tooltip/Tooltip";
+import Typography from "@mui/material/Typography";
+import Avatar from "@mui/material/Avatar";
+import Tooltip from "@mui/material/Tooltip";
 import {Link} from "react-router-dom";
 import {withStyles} from "@mui/styles";
 import Styles from "./Styles";

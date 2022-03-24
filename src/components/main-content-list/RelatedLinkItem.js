@@ -3,7 +3,7 @@ import {withStyles} from "@mui/styles";
 import Styles from "./Styles"
 import {Link} from "react-router-dom";
 import Avatar from "@mui/material/Avatar/Avatar";
-import Grid from "@mui/material/Grid/Grid";
+import Grid from "@mui/material/Grid";
 import Tooltip from '@mui/material/Tooltip';
 import {AppRoutes} from "../../routes/Routes";
 
