@@ -27,7 +27,7 @@ const styles = theme => ({
 class FormattedContentViewer extends Component {
 
     formatValues(values) {
-        return values.map(value => {
+        return values?.map(value => {
             return this.formatValue(value);
         })
 
