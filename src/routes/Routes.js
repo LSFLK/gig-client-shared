@@ -22,5 +22,5 @@ export const ApiRoutes = {
 };
 
 export function getServerUrl(url) {
-    return process.env.REACT_APP_SERVER_URL + url
+    return (process.env.REACT_APP_SERVER_URL + url)
 }
