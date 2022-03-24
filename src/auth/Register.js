@@ -14,11 +14,11 @@ export async function readerRegister(email, password) {
     };
     let response = await fetch(loginUrl, requestOptions);
     let result = await response.json();
-    if (result?.status === 200) {
+    if (response?.status === 200) {
         setAuthUser(result?.payload?.name);
         setAuthToken(result?.payload?.token);
         setUserRole(result?.payload?.role);
-        return {error: null, result: "success"}
+        return {error: null, result: result}
     }
-    return {error: "User Registration Failed!", result: "error"}
+    return {error: "User Registration Failed!", result:result}
 }
