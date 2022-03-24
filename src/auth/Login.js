@@ -18,7 +18,7 @@ export async function userLogin(username, password) {
         setAuthUser(result?.payload?.name);
         setAuthToken(result?.payload?.token);
         setUserRole(result?.payload?.role);
-        return {error: null, result: "success"}
+        return {error: null, result: result}
     }
     return {error: "Login failed!", result: "error"}
 }

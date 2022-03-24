@@ -2,7 +2,7 @@ import {ApiRoutes, getServerUrl} from "../../routes/Routes";
 import {getAuthHeaders, logout} from "../../auth/index";
 
 export async function validateToken(setUserState) {
-    console.log("validating token");
+
     let loginUrl = getServerUrl(ApiRoutes.tokenValidation);
 
     const requestOptions = {
@@ -11,7 +11,7 @@ export async function validateToken(setUserState) {
     };
     let response = await fetch(loginUrl, requestOptions);
     let data = await response.json();
-
+    console.log("validating token", data);
     if (data.status === 200) {
         console.log("token is valid.");
         return {error: null, result: true}
