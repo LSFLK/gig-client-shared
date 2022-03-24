@@ -1,18 +1,3 @@
-// const app = require("../../../../src/routes");        //parent project root directory
-//
-// export const AppRoutes = app.AppRoutes;
-
-export const AppRoutes = {
-    home: '/',
-    search: '/search/',
-    entity: '/content/',
-    edit: '/edit/',
-    login: '/login',
-    register: '/register',
-    graph: '/graphs/visualize'
-};
-
-
 export const ApiRoutes = {
     images: 'images',
     tokenValidation: 'api/token/validate',

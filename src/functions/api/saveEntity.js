@@ -1,7 +1,7 @@
 import {getAuthHeaders} from "../../auth/Authentication";
-import {ApiRoutes, AppRoutes, getServerUrl} from "../../routes/Routes";
+import {ApiRoutes, getServerUrl} from "../../routes/Routes";
 
-export function saveEntity(entity, modifiedEntity, navigate) {
+export function saveEntity(entity, modifiedEntity, navigate, editRoute) {
     let updateUrl = getServerUrl(ApiRoutes.update);
     const requestOptions = {
         headers: getAuthHeaders(),
@@ -17,7 +17,7 @@ export function saveEntity(entity, modifiedEntity, navigate) {
             if (data.status === 200) {
                 alert("updated successfully!");
                 if (entity.title !== modifiedEntity.title) {
-                    navigate(AppRoutes.edit + modifiedEntity.title)
+                    navigate(editRoute + modifiedEntity.title)
                 }
             }
             else {

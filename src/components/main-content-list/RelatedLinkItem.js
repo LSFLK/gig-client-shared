@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 import Avatar from "@mui/material/Avatar";
 import Grid from "@mui/material/Grid";
 import Tooltip from '@mui/material/Tooltip';
-import {AppRoutes} from "../../routes/Routes";
+import {AppRoutes, getServerUrl} from "../../routes/Routes";
 
 class RelatedLinkItem extends Component {
 
@@ -23,7 +23,8 @@ class RelatedLinkItem extends Component {
     }
 
     getImage(title) {
-        let searchUrl = process.env.REACT_APP_SERVER_URL + AppRoutes.entity + title + "?imageOnly=true";
+        const {entityRoute} = this.props;
+        let searchUrl = getServerUrl(entityRoute + title + "?imageOnly=true");
         fetch(searchUrl, {
             method: 'GET'
         }).then(results => {
@@ -38,12 +39,12 @@ class RelatedLinkItem extends Component {
     }
 
     render() {
-        const {classes, title, url} = this.props;
+        const {classes, title, url, entityRoute} = this.props;
         const {imageUrl} = this.state;
         return (
             <Grid item>
                 <Tooltip title={title} aria-label="add">
-                    <Link className={classes.link} to={AppRoutes.entity + url}>
+                    <Link className={classes.link} to={entityRoute + url}>
                         <Avatar alt={title} src={imageUrl}/>
                     </Link>
                 </Tooltip>

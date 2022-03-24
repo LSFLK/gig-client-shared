@@ -11,10 +11,13 @@ import Paper from '@mui/material/Paper';
 class MainContentList extends Component {
 
     render() {
-        const {classes, listItems, vertical, elevation} = this.props;
+        const {classes, listItems, vertical, elevation, entityRoute, searchRoute} = this.props;
         if (listItems?.length === 0) {
             return <Paper className={classes.paper} elevation={elevation}><Typography component="p"
-                                                                              style={{textAlign: 'center'}}>
+                                                                                      style={{
+                                                                                          textAlign: 'center',
+                                                                                          color: 'rgba(0,0,0,0.8)'
+                                                                                      }}>
                 No Results Found
             </Typography></Paper>
         }
@@ -32,6 +35,8 @@ class MainContentList extends Component {
                                          categories={entity.categories}
                                          vertical={vertical}
                                          elevation={elevation}
+                                         entityRoute={entityRoute}
+                                         searchRoute={searchRoute}
                         />
                     ))}
                 </List>

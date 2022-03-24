@@ -1,7 +1,8 @@
 import React, {Component} from "react";
 import Typography from '@mui/material/Typography';
 import {withStyles} from '@mui/styles';
-import {ValueTypes} from '../../constants/ValueTypes'
+import {ValueTypes} from '../../constants/ValueTypes';
+import {Facebook} from 'react-content-loader';
 
 const styles = theme => ({
     container: {
@@ -71,11 +72,16 @@ class FormattedContentViewer extends Component {
 
     render() {
         const {content, key} = this.props;
-        return (
-            <div className={"mainContent"} key={key}>
-                {this.formatValues(content)}
-            </div>
-        );
+        if (content) {
+            return (
+                <div className={"mainContent"} key={key}>
+                    {this.formatValues(content)}
+                </div>
+            );
+        }
+        return (<Typography component="p" style={{textAlign: 'center'}}>
+            <Facebook/>
+        </Typography>)
     }
 }
 
