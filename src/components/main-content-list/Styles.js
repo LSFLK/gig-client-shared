@@ -1,17 +1,17 @@
 const Styles = theme => ({
             appBar: {
                 backgroundColor: '#282c34',
-                padding: theme.spacing(1),
+                padding: "8px",
             },
             headerColumn: {
-                paddingTop: theme.spacing(0.5)
+                paddingTop: "4px"
             },
             loaderColumn: {
-                paddingTop: theme.spacing(1.5)
+                paddingTop: "12px"
             },
             container: {
                 backgroundColor: '#eeeeee',
-                padding: theme.spacing(2),
+                padding: "16px",
                 flexGrow: 1,
                 display: 'flex',
                 justifyContent: 'center',
@@ -20,34 +20,31 @@ const Styles = theme => ({
             },
             footer: {
                 backgroundColor: '#eeeeee',
-                paddingTop: theme.spacing(1),
-                paddingBottom: theme.spacing(2),
+                paddingTop: "8px",
+                paddingBottom: "16px",
             },
             paper: {
-                margin: theme.spacing(2),
+                margin: "16px",
                 padding: '20px',
                 textAlign: 'left',
-                color: theme.palette.text.primary,
             },
             profilePaper: {
-                margin: theme.spacing(2),
-                padding: theme.spacing(2),
+                margin: "16px",
+                padding: "16px",
                 textAlign: 'left',
-                color: theme.palette.text.primary,
                 boxShadow: '0px 3px 6px #00000029',
                 borderRadius: 16,
                 minHeight: '100vh',
             },
             headerText: {
                 color: '#000000DE',
-                marginLeft: theme.spacing(2),
+                marginLeft: "16px",
                 fontSize: '18px',
             },
             trendingContainer: {
                 margin: 10,
-                padding: theme.spacing(2),
+                padding: "16px",
                 textAlign: 'left',
-                color: theme.palette.text.primary,
                 backgroundColor: '#ddd'
             },
             trendingListContainer: {
@@ -60,7 +57,7 @@ const Styles = theme => ({
                 display: 'inline',
             },
             link: {
-                paddingRight: theme.spacing(0.5),
+                paddingRight: "4px",
                 textDecoration: 'none',
             },
             collapsible: {
@@ -74,20 +71,16 @@ const Styles = theme => ({
             search: {
                 position: 'relative',
                 borderRadius: '20px',
-                backgroundColor: theme.palette.common.white,
+                backgroundColor: 'white',
                 '&:hover': {
-                    backgroundColor: theme.palette.common.white,
+                    backgroundColor: 'white',
                 },
-                marginRight: theme.spacing(2),
+                marginRight: "16px",
                 marginLeft: 0,
                 width: '100%',
-                [theme.breakpoints.up('sm')]: {
-                    marginLeft: theme.spacing(2),
-                    width: 'auto',
-                },
             },
             searchIcon: {
-                width: theme.spacing(9),
+                width: "73px",
                 height: '100%',
                 position: 'absolute',
                 pointerEvents: 'none',
@@ -124,7 +117,7 @@ const Styles = theme => ({
             mainContentItemTitle: {
                 fontSize: 18,
                 color: '#000000DE',
-                marginBottom: theme.spacing(1),
+                marginBottom: "8px",
             },
             trendingItemTitle: {
                 fontSize: 16,

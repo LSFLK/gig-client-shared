@@ -1,7 +1,8 @@
 import React, {Component} from "react";
 import Typography from '@mui/material/Typography';
 import {withStyles} from '@mui/styles';
-import {ValueTypes} from '../../constants/ValueTypes'
+import {ValueTypes} from '../../constants/ValueTypes';
+import {Facebook} from 'react-content-loader';
 
 const styles = theme => ({
     container: {
@@ -10,8 +11,8 @@ const styles = theme => ({
         padding: '10px'
     },
     searchResult: {
-        paddingTop: theme.spacing(2),
-        paddingBottom: theme.spacing(2),
+        paddingTop: "16px",
+        paddingBottom: "16px",
         color: 'black',
         textAlign: 'left',
         margin: '10px',
@@ -27,7 +28,7 @@ const styles = theme => ({
 class FormattedContentViewer extends Component {
 
     formatValues(values) {
-        return values.map(value => {
+        return values?.map(value => {
             return this.formatValue(value);
         })
 
@@ -71,11 +72,16 @@ class FormattedContentViewer extends Component {
 
     render() {
         const {content, key} = this.props;
-        return (
-            <div className={"mainContent"} key={key}>
-                {this.formatValues(content)}
-            </div>
-        );
+        if (content) {
+            return (
+                <div className={"mainContent"} key={key}>
+                    {this.formatValues(content)}
+                </div>
+            );
+        }
+        return (<Typography component="p" style={{textAlign: 'center'}}>
+            <Facebook/>
+        </Typography>)
     }
 }
 

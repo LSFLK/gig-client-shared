@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import {withStyles} from "@mui/styles";
 import {Typography} from "@mui/material";
 import Styles from "./Styles"
-import List from "@mui/material/List/List";
+import List from "@mui/material/List";
 import MainContentItem from "./MainContentItem";
 import Moment from 'moment';
 import {Facebook} from 'react-content-loader';
@@ -11,10 +11,13 @@ import Paper from '@mui/material/Paper';
 class MainContentList extends Component {
 
     render() {
-        const {classes, listItems, vertical, elevation} = this.props;
+        const {classes, listItems, vertical, elevation, entityRoute, searchRoute} = this.props;
         if (listItems?.length === 0) {
-            return <Paper className={classes.paper} elevation={3}><Typography component="p"
-                                                                              style={{textAlign: 'center'}}>
+            return <Paper className={classes.paper} elevation={elevation}><Typography component="p"
+                                                                                      style={{
+                                                                                          textAlign: 'center',
+                                                                                          color: 'rgba(0,0,0,0.8)'
+                                                                                      }}>
                 No Results Found
             </Typography></Paper>
         }
@@ -32,6 +35,8 @@ class MainContentList extends Component {
                                          categories={entity.categories}
                                          vertical={vertical}
                                          elevation={elevation}
+                                         entityRoute={entityRoute}
+                                         searchRoute={searchRoute}
                         />
                     ))}
                 </List>
@@ -39,22 +44,22 @@ class MainContentList extends Component {
         }
         return (
             <>
-                <Paper className={classes.paper}>
+                <Paper className={classes.paper} elevation={elevation}>
                     <Typography component="p" style={{textAlign: 'center'}}>
                         <Facebook/>
                     </Typography>
                 </Paper>
-                <Paper className={classes.paper}>
+                <Paper className={classes.paper} elevation={elevation}>
                     <Typography component="p" style={{textAlign: 'center'}}>
                         <Facebook/>
                     </Typography>
                 </Paper>
-                <Paper className={classes.paper}>
+                <Paper className={classes.paper} elevation={elevation}>
                     <Typography component="p" style={{textAlign: 'center'}}>
                         <Facebook/>
                     </Typography>
                 </Paper>
-                <Paper className={classes.paper}>
+                <Paper className={classes.paper} elevation={elevation}>
                     <Typography component="p" style={{textAlign: 'center'}}>
                         <Facebook/>
                     </Typography>

@@ -1,7 +1,3 @@
-const app = require("../../../../src/routes");        //parent project root directory
-
-export const AppRoutes = app.AppRoutes;
-
 export const ApiRoutes = {
     images: 'images',
     tokenValidation: 'api/token/validate',
@@ -26,5 +22,5 @@ export const ApiRoutes = {
 };
 
 export function getServerUrl(url) {
-    return process.env.REACT_APP_SERVER_URL + url
+    return (process.env.REACT_APP_SERVER_URL + url)
 }

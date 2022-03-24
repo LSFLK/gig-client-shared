@@ -1,13 +1,13 @@
 import {ApiRoutes, getServerUrl} from "../../routes/Routes";
 import {getAuthHeaders} from "../../auth";
 
-export async function deleteEntity(entity) {
-    let deleteUrl = getServerUrl(ApiRoutes.delete);
+export async function createEntity(entity) {
+    let addUrl = getServerUrl(ApiRoutes.add);
     const requestOptions = {
         headers: getAuthHeaders(),
         method: 'POST',
-        body: JSON.stringify({title: entity.title})
+        body: JSON.stringify(entity)
     };
-    let response = await fetch(deleteUrl, requestOptions);
+    let response = await fetch(addUrl, requestOptions);
     return response.json();
 }

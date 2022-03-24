@@ -1,0 +1,174 @@
+{
+  "title": "Test Component Library Modified Entity",
+  "snippet": "Roger Menezes, an old boy of St. Peter’s College, Bambalapitiya, is creating the kind of music that we all love to listen to, and he is doing it at the Galadari Hotel.Roger is now based in Sydney, Australia, and his trip to Sri Lanka is after two decades.He went into action on Wednesday, February 9th, and this is his final week – tomorrow (Wednesday) till Sunday, February 27th, from 7.30 pm onwards.I checked out his scene on Thursday, February 10th, and was highly impressed with his versatility.He not only sings but also plays guitar, sax, and even the drums – when he was with the group Savages.One can sit and listen to his music for hours, and that is because of the variety he brings into his performance.These are some of the comments that came my way regarding Roger Menezes:*  Vivian Candappa: The Menezes have so much music in their blood. I remember papa Menezes’ music shop, at the Bambalapitya junction. Peter, another versatile musician, is also in Aussie now. He was my classmate, with lots of memories in and out of school. * Pam De Fransz: He is super fantastic… heard him play in Sydney many times, with his lovely wife who sings. By the way, he is an old Peterite. *  Cliff Willenberg: He is one of the most humble human beings I’ve ever met.. We were the first Sri Lankan band, formed in Australia, called Eastern Spice. Great musician. Very versatile. *  Gordon Rebeira:Roger and I played in the same band, in Sydney, in the ’70s The band was called Eastern Spice. Later on, Roger and I played as a duo. We are still in touch, through music, whenever we get the chance. *  Sohan Weerasinghe:Great musician. I have performed with this guy in Sydney and Canberra. Very versatile musician. *  G A Chandral Fonseka: Super musician.By the way, I also got the opportunity of listening to the General Manager, Galadari Hotel, Sampath Siriwardena, exercise his vocal chords, a bit, that particular evening, and he sounded good doing ‘Sweet Caroline’ and ‘If Tomorrow Never Comes.’",
+  "categories": [
+    "News",
+    "The Island",
+    "Features"
+  ],
+  "attributes": {
+    "author": {
+      "name": "author",
+      "values": [
+        {
+          "value_type": "string",
+          "value_string": "",
+          "source": "",
+          "date": "0001-01-01T00:00:00Z",
+          "updated_at": "2022-02-22T19:30:57.173+05:30"
+        }
+      ]
+    },
+    "content": {
+      "name": "content",
+      "values": [
+        {
+          "value_type": "html",
+          "value_string": "\u003chtml\u003e\u003chead\u003e\u003c/head\u003e\u003cbody\u003e\u003cp\u003eRoger Menezes, an old boy of St. Peter’s College, Bambalapitiya, is creating the kind of music that we all love to listen to, and he is doing it at the Galadari Hotel.\u003c/p\u003e\u003cp\u003eRoger is now based in Sydney, Australia, and his trip to Sri Lanka is after two decades.\u003c/p\u003e\u003cp\u003eHe went into action on Wednesday, February 9th, and this is his final week – tomorrow (Wednesday) till Sunday, February 27th, from 7.30 pm onwards.\u003c/p\u003e\u003cp\u003eI checked out his scene on Thursday, February 10th, and was highly impressed with his versatility.\u003c/p\u003e\u003cp\u003eHe not only sings but also plays guitar, sax, and even the drums – when he was with the group Savages.\u003c/p\u003e\u003cp\u003eOne can sit and listen to his music for hours, and that is because of the variety he brings into his performance.\u003c/p\u003e\u003cp\u003eThese are some of the comments that came my way regarding Roger Menezes:\u003c/p\u003e\u003cp\u003e\u003cstrong\u003e*  Vivian Candappa:\u003c/strong\u003e\u003c/p\u003e\u003cp\u003e\u003cspan\u003e\u003cb\u003e\u003c/b\u003e The Menezes have so much music in their blood. I remember papa Menezes’ music shop, at the Bambalapitya junction. Peter, another versatile musician, is also in Aussie now. He was my classmate, with lots of memories in and out of school. \u003cb\u003e\u003c/b\u003e\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cstrong\u003e* Pam De Fransz:\u003c/strong\u003e\u003c/p\u003e\u003cp\u003e\u003cspan\u003e\u003cb\u003e\u003c/b\u003e He is super fantastic… heard him play in Sydney many times, with his lovely wife who sings. By the way, he is an old Peterite. \u003cb\u003e\u003c/b\u003e\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cstrong\u003e*  Cliff Willenberg:\u003c/strong\u003e\u003c/p\u003e\u003cp\u003e\u003cspan\u003e\u003cb\u003e\u003c/b\u003e He is one of the most humble human beings I’ve ever met.. We were the first Sri Lankan band, formed in Australia, called Eastern Spice. Great musician. Very versatile. \u003cb\u003e\u003c/b\u003e\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cstrong\u003e*  Gordon Rebeira:\u003c/strong\u003e\u003c/p\u003e\u003cp\u003e\u003cspan\u003e\u003cb\u003e\u003c/b\u003eRoger and I played in the same band, in Sydney, in the ’70s The band was called Eastern Spice. Later on, Roger and I played as a duo. We are still in touch, through music, whenever we get the chance. \u003cb\u003e\u003c/b\u003e\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cstrong\u003e*  Sohan Weerasinghe:\u003c/strong\u003e\u003c/p\u003e\u003cp\u003e\u003cspan\u003e\u003cb\u003e\u003c/b\u003eGreat musician. I have performed with this guy in Sydney and Canberra. Very versatile musician. \u003cb\u003e\u003c/b\u003e\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cstrong\u003e*  G A Chandral Fonseka:\u003c/strong\u003e\u003c/p\u003e\u003cp\u003e\u003cspan\u003e\u003cb\u003e\u003c/b\u003e Super musician.\u003c/span\u003e\u003c/p\u003e\u003cp\u003eBy the way, I also got the opportunity of listening to the General Manager, Galadari Hotel, Sampath Siriwardena, exercise his vocal chords, a bit, that particular evening, and he sounded good doing ‘Sweet Caroline’ and ‘If Tomorrow Never Comes.’\u003c/p\u003e\u003c/body\u003e\u003c/html\u003e",
+          "source": "",
+          "date": "0001-01-01T00:00:00Z",
+          "updated_at": "2022-02-22T19:30:57.173+05:30"
+        }
+      ]
+    },
+    "date": {
+      "name": "date",
+      "values": [
+        {
+          "value_type": "date",
+          "value_string": "2022-02-22 19:28:31.963733871 +0530 +0530",
+          "source": "",
+          "date": "0001-01-01T00:00:00Z",
+          "updated_at": "2022-02-22T19:30:57.173+05:30"
+        }
+      ]
+    },
+    "titles": {
+      "name": "titles",
+      "values": [
+        {
+          "value_type": "string",
+          "value_string": "Check him out…",
+          "source": "http://island.lk/check-him-out/",
+          "date": "2022-02-22T19:28:31.963+05:30",
+          "updated_at": "2022-02-22T19:31:12.029+05:30"
+        }
+      ]
+    }
+  },
+  "links": [
+    {
+      "title": "Roger Menezes",
+      "dates": [
+        "2022-02-22T19:28:31.963+05:30"
+      ]
+    },
+    {
+      "title": "St. Peter ’ s College",
+      "dates": [
+        "2022-02-22T19:28:31.963+05:30"
+      ]
+    },
+    {
+      "title": "Bambalapitiya",
+      "dates": [
+        "2022-02-22T19:28:31.963+05:30"
+      ]
+    },
+    {
+      "title": "Galadari Hotel",
+      "dates": [
+        "2022-02-22T19:28:31.963+05:30"
+      ]
+    },
+    {
+      "title": "Roger",
+      "dates": [
+        "2022-02-22T19:28:31.963+05:30"
+      ]
+    },
+    {
+      "title": "Sydney",
+      "dates": [
+        "2022-02-22T19:28:31.963+05:30"
+      ]
+    },
+    {
+      "title": "Australia",
+      "dates": [
+        "2022-02-22T19:28:31.963+05:30"
+      ]
+    },
+    {
+      "title": "Sri Lanka",
+      "dates": [
+        "2022-02-22T19:28:31.963+05:30"
+      ]
+    },
+    {
+      "title": "Vivian Candappa",
+      "dates": [
+        "2022-02-22T19:28:31.963+05:30"
+      ]
+    },
+    {
+      "title": "Menezes",
+      "dates": [
+        "2022-02-22T19:28:31.963+05:30"
+      ]
+    },
+    {
+      "title": "Bambalapitya",
+      "dates": [
+        "2022-02-22T19:28:31.963+05:30"
+      ]
+    },
+    {
+      "title": "Peter",
+      "dates": [
+        "2022-02-22T19:28:31.963+05:30"
+      ]
+    },
+    {
+      "title": "Pam De Fransz",
+      "dates": [
+        "2022-02-22T19:28:31.963+05:30"
+      ]
+    },
+    {
+      "title": "Eastern Spice",
+      "dates": [
+        "2022-02-22T19:28:31.963+05:30"
+      ]
+    },
+    {
+      "title": "Gordon Rebeira",
+      "dates": [
+        "2022-02-22T19:28:31.963+05:30"
+      ]
+    },
+    {
+      "title": "Sohan Weerasinghe",
+      "dates": [
+        "2022-02-22T19:28:31.963+05:30"
+      ]
+    },
+    {
+      "title": "Canberra",
+      "dates": [
+        "2022-02-22T19:28:31.963+05:30"
+      ]
+    },
+    {
+      "title": "Sampath Siriwardena",
+      "dates": [
+        "2022-02-22T19:28:31.963+05:30"
+      ]
+    }
+  ],
+  "source_date": "2022-02-22T19:28:31.963+05:30",
+  "source": "http://island.lk/check-him-out/",
+  "created_at": "2022-02-22T19:31:12.029+05:30",
+  "updated_at": "2022-02-22T19:31:12.029+05:30",
+  "image_url": "images/island.lk/Roger-Menezes.jpg"
+}
