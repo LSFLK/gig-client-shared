@@ -42,7 +42,7 @@ class MainContentItem extends Component {
                                         variant="body2"
                                         color="textSecondary"
                                     >
-                                        {description.substring(0, 400)}
+                                        {description?.substring(0, 400)}
                                     </Typography>
                                 </Link>
                                 <div>

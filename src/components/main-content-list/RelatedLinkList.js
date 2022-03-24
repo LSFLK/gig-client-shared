@@ -26,8 +26,8 @@ class RelatedLinkList extends Component {
     render() {
         const {classes, links} = this.props;
 
-        let viewSet = links.slice(0, 5);
-        let hiddenSet = links.slice(5);
+        let viewSet = links?.slice(0, 5);
+        let hiddenSet = links?.slice(5);
 
         return (
             <Grid container width={1} spacing={2}>
@@ -41,9 +41,9 @@ class RelatedLinkList extends Component {
                         No Results Found
                     </Typography>
                 }
-                {!this.state.open && hiddenSet.length > 0 ?
+                {!this.state.open && hiddenSet?.length > 0 ?
                     <Grid item>
-                        <Tooltip title={hiddenSet.length + " more"} aria-label="add">
+                        <Tooltip title={hiddenSet?.length + " more"} aria-label="add">
                             <Link className={classes.link} to="#">
                                 <Avatar alt="view more" src="plus.jpg" onClick={this.handleClick}/>
                             </Link>
