@@ -1,6 +1,5 @@
 import React from "react";
 import {Navigate, useLocation} from 'react-router-dom';
-import {AppRoutes} from "../routes/Routes";
 import {userIsEditAuthorized} from "./Authentication";
 
 export function ProtectedRoute(props, {children}) {
