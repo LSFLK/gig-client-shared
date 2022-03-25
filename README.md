@@ -11,7 +11,11 @@ Open [http://localhost:6006](http://localhost:6006) to view React Components.
 
 ### `npm run test`
 
-Runs jest test on all components and functions in the terminal.\
+Runs jest test on all components and functions in the terminal.
+
+### `npm run build`
+
+Runs package build.
 
 ### `./npm_publish.sh`
 

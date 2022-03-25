@@ -1,5 +1,5 @@
 import {ApiRoutes, getServerUrl} from "../../routes/Routes";
-import {getAuthHeaders} from "../../auth";
+import {getAuthHeaders} from "../../auth/Authentication";
 
 export async function deleteEntity(entity) {
     let deleteUrl = getServerUrl(ApiRoutes.delete);
