@@ -2,9 +2,9 @@ import React from "react";
 import {Navigate, useLocation} from 'react-router-dom';
 import {userIsEditAuthorized} from "./Authentication";
 
-export function ProtectedRoute(props, {children}) {
+export function ProtectedRoute(props) {
     let location = useLocation();
-    const {loginRoute}=props;
+    const {loginRoute, children} = props;
 
     if (!userIsEditAuthorized()) {
         // Redirect them to the /login page, but save the current location they were
