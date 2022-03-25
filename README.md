@@ -10,6 +10,9 @@ Runs the app in the development mode.\
 Open [http://localhost:6006](http://localhost:6006) to view React Components.
 
 ### `npm run test`
+* To run test and publish commands you need to setup a local GIG server.
+Refer to [https://github.com/LSFLK/GIG] for more details.
+* Modify src/test-config/TestServer file to change the test server url.
 
 Runs jest test on all components and functions in the terminal.
 

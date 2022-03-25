@@ -6,9 +6,7 @@ import 'jest-localstorage-mock';
 import {readerRegister} from "./Register";
 import {getAuthHeaders, userIsEditAuthorized} from "./Authentication";
 import {userLogin} from "./Login";
-import {render} from "@testing-library/react";
-import FormattedContentViewer from "../components/formatted-content-viewer/FormattedContentViewer";
-import {ProtectedRoute} from "./ProtectedRoute";
+import {TestServerUrl} from "../test-config/TestServer";
 
 fetchMock.doMock();
 describe("validateToken", () => {
@@ -18,7 +16,7 @@ describe("validateToken", () => {
     });
 
     test("admin user login", () => {
-        process.env.REACT_APP_SERVER_URL = 'http://localhost:9000/';
+        process.env.REACT_APP_SERVER_URL = TestServerUrl;
         return userLogin("someone@gmail.com", "abc123").then(data => {
             expect(data.result.payload.email).toBe("someone@gmail.com");
         });
@@ -29,7 +27,7 @@ describe("validateToken", () => {
     });
 
     test("reader user login", () => {
-        process.env.REACT_APP_SERVER_URL = 'http://localhost:9000/';
+        process.env.REACT_APP_SERVER_URL = TestServerUrl;
         return userLogin("someone3@gmail.com", "abc123").then(data => {
             expect(data.result.payload.email).toBe("someone3@gmail.com");
         });
@@ -40,7 +38,7 @@ describe("validateToken", () => {
     });
 
     test("register reader works", () => {
-        process.env.REACT_APP_SERVER_URL = 'http://localhost:9000/';
+        process.env.REACT_APP_SERVER_URL = TestServerUrl;
         let newEmail = "newemail" + new Date() + "@gmail.com";
         return readerRegister(newEmail, "abc123").then(data => {
             expect(data?.result?.email).toBe(newEmail);
