@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 import Avatar from "@mui/material/Avatar";
 import Grid from "@mui/material/Grid";
 import Tooltip from '@mui/material/Tooltip';
-import {AppRoutes, getServerUrl} from "../../routes/Routes";
+import {getServerUrl} from "../../routes/Routes";
 
 class RelatedLinkItem extends Component {
 

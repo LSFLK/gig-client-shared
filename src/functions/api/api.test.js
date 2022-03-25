@@ -1,5 +1,4 @@
 import React from "react";
-import {BrowserRouter} from 'react-router-dom';
 import 'regenerator-runtime/runtime';
 import {createEntity, deleteEntity, getEntity, getGraphStats, getResults, updateEntity, validateToken} from "./index";
 import {userLogin} from "../../auth";
@@ -11,7 +10,7 @@ import {TestServerUrl} from "../../test-config/TestServer";
 
 fetchMock.doMock();
 describe("validateToken", () => {
-    const setMockState=()=>{};
+    const setMockState=()=>{console.log("this is a mock function")};
     test("validateToken fails with no token", () => {
         process.env.REACT_APP_SERVER_URL = TestServerUrl;
         return validateToken(setMockState).then(data => {
@@ -51,7 +50,6 @@ describe("validateToken", () => {
 
     test("getResults works", () => {
         process.env.REACT_APP_SERVER_URL = TestServerUrl;
-        const entityTitle = "Sri Lanka";
         return getResults(entityTitle, true, [], 1, setMockState, setMockState, 15).then(data => {
             expect(data.length).toBe(15);
         });

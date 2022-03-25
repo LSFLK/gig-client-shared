@@ -1,5 +1,4 @@
 import React from 'react';
-import {BrowserRouter} from 'react-router-dom';
 import testSearchResults from "../test-data/TestSearchResults"
 import { FormattedContentViewer} from '../../components';
 

@@ -1,5 +1,4 @@
 import React from "react";
-import {BrowserRouter} from 'react-router-dom';
 import 'regenerator-runtime/runtime';
 import fetchMock from "jest-fetch-mock"
 import 'jest-localstorage-mock';

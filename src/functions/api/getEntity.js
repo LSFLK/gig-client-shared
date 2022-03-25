@@ -6,7 +6,6 @@ export async function getEntity(entityTitle) {
     if (response?.status !== 200) {
         return null
     }
-    let data = await response.json();
-    return data
+    return response.json();
 }
 

@@ -10,7 +10,6 @@ class InfiniteList extends Component {
         super(props);
         this.state = {
             isLoading: false,
-            listEnded: false
         };
 
         this.loadResults = this.loadResults.bind(this);
@@ -22,8 +21,6 @@ class InfiniteList extends Component {
         if (!results) {
             this.setState({
                 isLoading: false,
-                listEnded: true,
-
             });
         } else {
             this.setState({isLoading: false});
@@ -32,7 +29,7 @@ class InfiniteList extends Component {
 
     render() {
         const {listItems, list} = this.props;
-        const {isLoading, listEnded} = this.state;
+        const {isLoading} = this.state;
 
         return (
             <div>
