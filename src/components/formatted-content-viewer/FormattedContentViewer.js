@@ -53,7 +53,7 @@ class FormattedContentViewer extends Component {
     }
 
     formatDate(dateString) {
-        return <Typography key={dateString}>{new Date(dateString).toDateString()}</Typography>;
+        return <Typography key={dateString}>{dateString}</Typography>;
     }
 
     formatWikiText(textString) {
