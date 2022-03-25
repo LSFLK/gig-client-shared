@@ -3,7 +3,7 @@ import Typography from '@mui/material/Typography';
 import {withStyles} from '@mui/styles';
 import {ValueTypes} from '../../constants/ValueTypes';
 import {Facebook} from 'react-content-loader';
-import {highlightText} from '../../functions/highlightText'
+import {highlightText} from "../../functions";
 
 const styles = theme => ({
     container: {
@@ -36,15 +36,17 @@ class FormattedContentViewer extends Component {
     }
 
     formatValue(value) {
+        const {highlightTags, entityRoute} = this.props;
+        let highlightedValue = highlightText(value.value_string, highlightTags, entityRoute);
         switch (value.value_type) {
             case ValueTypes.Date:
-                return this.formatDate(value.value_string);
+                return this.formatDate(highlightedValue);
             case ValueTypes.WikipediaText:
-                return this.formatWikiText(value.value_string);
+                return this.formatWikiText(highlightedValue);
             case ValueTypes.HTML:
-                return this.viewAsHTML(value.value_string);
+                return this.viewAsHTML(highlightedValue);
             default:
-                return <Typography key={value.value_string + value.date}>{value.value_string.split('\n').map(item => {
+                return <Typography key={value.value_type + value.date}>{highlightedValue.split('\n').map(item => {
                     return <span key={item}>{item}<br/></span>
                 })} {value.date}</Typography>;
         }
@@ -68,8 +70,7 @@ class FormattedContentViewer extends Component {
     }
 
     viewAsHTML(htmlString) {
-        const {highlightTags} = this.props;
-        return <Typography key={"html"} dangerouslySetInnerHTML={{__html: highlightText(htmlString, highlightTags)}}/>
+        return <Typography key={"html"} dangerouslySetInnerHTML={{__html: htmlString}}/>
     }
 
     render() {
