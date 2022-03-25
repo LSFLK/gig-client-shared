@@ -10,7 +10,6 @@ export function highlightText(text, tags = []) {
             const endIndex = startIndex + currentText.length;
             const nextIndex = matches[i + 1]?.index;
             const untilNextText = text.slice(endIndex, nextIndex);
-            console.log("<span key='" + i + "'><mark>" + currentText + "</mark>" + untilNextText + "</span>");
             return "<span key='" + i + "'><mark>" + currentText + "</mark>" + untilNextText + "</span>"
         })
         + "</span>"
