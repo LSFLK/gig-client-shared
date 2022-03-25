@@ -3,6 +3,7 @@ import Typography from '@mui/material/Typography';
 import {withStyles} from '@mui/styles';
 import {ValueTypes} from '../../constants/ValueTypes';
 import {Facebook} from 'react-content-loader';
+import highlightText from '../../functions/highlightText'
 
 const styles = theme => ({
     container: {
@@ -67,7 +68,8 @@ class FormattedContentViewer extends Component {
     }
 
     viewAsHTML(htmlString) {
-        return <Typography key={"html"} dangerouslySetInnerHTML={{__html: htmlString}}/>
+        const {highlightTags} = this.props;
+        return <Typography key={"html"} dangerouslySetInnerHTML={{__html: highlightText(htmlString, highlightTags)}}/>
     }
 
     render() {

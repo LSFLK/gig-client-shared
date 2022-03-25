@@ -31,5 +31,6 @@ export const WithShortData = Template.bind({});
 WithShortData.args = {
     key: 3,
     content: TestEntity.attributes["content"].values,
+    highlightTags:["Rathindra"]
 };
 

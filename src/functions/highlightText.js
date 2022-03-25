@@ -1,0 +1,18 @@
+export function highlightText(text, tags = []) {
+    if (!tags?.length) return text;
+    const matches = [...text.matchAll(new RegExp(tags.join("|"), "ig"))];
+    const startText = text.slice(0, matches[0]?.index);
+    return (
+        "<span>" + startText +
+        matches.map((match, i) => {
+            const startIndex = match.index;
+            const currentText = match[0];
+            const endIndex = startIndex + currentText.length;
+            const nextIndex = matches[i + 1]?.index;
+            const untilNextText = text.slice(endIndex, nextIndex);
+            console.log("<span key='" + i + "'><mark>" + currentText + "</mark>" + untilNextText + "</span>");
+            return "<span key='" + i + "'><mark>" + currentText + "</mark>" + untilNextText + "</span>"
+        })
+        + "</span>"
+    );
+}

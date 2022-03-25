@@ -40,7 +40,7 @@ describe("validateToken", () => {
         process.env.REACT_APP_SERVER_URL = TestServerUrl;
         let newEmail = "newemail" + new Date() + "@gmail.com";
         return readerRegister(newEmail, "abc123").then(data => {
-            expect(data?.result?.email).toBe(newEmail);
+            expect(data?.result?.payload?.email).toBe(newEmail);
         });
     });
 
