@@ -1,6 +1,7 @@
 import React from 'react';
 import testSearchResults from "../test-data/TestSearchResults"
 import { FormattedContentViewer} from '../../components';
+import TestEntity from '../test-data/TestEntity.json'
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -24,5 +25,11 @@ export const WithData = Template.bind({});
 WithData.args = {
     key: 3,
     content: testSearchResults[0].attributes["content"].values,
+};
+
+export const WithShortData = Template.bind({});
+WithShortData.args = {
+    key: 3,
+    content: TestEntity.attributes["content"].values,
 };
 

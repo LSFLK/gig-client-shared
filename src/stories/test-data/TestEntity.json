@@ -1,0 +1,138 @@
+{
+  "title": "Health Ministry quashes rumours about removal of mask mandate",
+  "image_url": "images/island.lk/hamdani.jpg",
+  "source": "http://island.lk/health-ministry-quashes-rumours-about-removal-of-mask-mandate/",
+  "source_signature": "trusted",
+  "source_date": "2022-02-22T17:45:00.828+05:30",
+  "attributes": {
+    "author": {
+      "name": "author",
+      "values": [
+        {
+          "value_type": "string",
+          "value_string": "",
+          "source": "",
+          "date": "0001-01-01T00:00:00Z",
+          "updated_at": "2022-02-22T17:45:53.336+05:30"
+        }
+      ]
+    },
+    "content": {
+      "name": "content",
+      "values": [
+        {
+          "value_type": "html",
+          "value_string": "\u003chtml\u003e\u003chead\u003e\u003c/head\u003e\u003cbody\u003e\u003cp\u003e\u003cspan\u003eBy Rathindra Kuruwita\u003c/span\u003e\u003c/p\u003e\u003cp\u003eReports that the Ministry of Health was considering the removal of the mask mandate were baseless, Medical Technical Services Director Dr. Anwar Hamdani told the media yesterday.\u003c/p\u003e\u003cp\u003eDr. Hamdani said some people were spreading rumours that mask mandates would be removed soon. However, neither the government nor the Health Ministry had even thought of that, he said.\u003c/p\u003e\u003cp\u003e“We can’t even think of such a decision. The booster roll-out is still going slow,” he said. The Sri Lankan health officials followed the example and recommendation of the World Health Organization on such matters, he said.\u003c/p\u003e\u003cp\u003eDr. Hamdani said that some foreign countries had decided that masks would no longer be mandatory. He said that such decisions were based on the number of people who had taken the vaccines and other considerations.\u003c/p\u003e\u003cp\u003e“In our case, the number of COVID related deaths had increased by 17% compared to the beginning of the year. The number of COVID cases who required oxygen and had been admitted to ICUs had increased significantly.\u003c/p\u003e\u003cp\u003eDr. Hamdani said that people should get the booster shot as soon as possible and follow health guidelines to prevent the spread of COVID. Despite the best efforts of health officials only about six million people had so far taken the booster shot.\u003c/p\u003e\u003cp\u003e“People are not taking the booster due to various myths and rumours. People should get the booster as soon as possible. They should also adhere to health guidelines. COVID may have many variants but the way all variants spread is the same,” he said.\u003c/p\u003e\u003cp\u003eMeanwhile Director General of Health Services Dr. Asela Gunawardena said that removing of mask mandates would be in the last phase of the government’s campaign against the COVID-19 pandemic.\u003c/p\u003e\u003cp\u003e“The masks will be removed in the end. We need to give booster doses to 14.1 million people. We have not even reached half of that. If we can give the booster to all, we can ensure some sort of herd immunity. If more people take the booster, we can relax more,” he said.\u003c/p\u003e\u003c/body\u003e\u003c/html\u003e",
+          "source": "",
+          "date": "0001-01-01T00:00:00Z",
+          "updated_at": "2022-02-22T17:45:53.336+05:30"
+        }
+      ]
+    },
+    "date": {
+      "name": "date",
+      "values": [
+        {
+          "value_type": "date",
+          "value_string": "2022-02-22 17:45:00.828149423 +0530 +0530",
+          "source": "",
+          "date": "0001-01-01T00:00:00Z",
+          "updated_at": "2022-02-22T17:45:53.336+05:30"
+        },
+        {
+          "value_type": "date",
+          "value_string": "2022-02-22 19:28:29.97778517 +0530 +0530",
+          "source": "",
+          "date": "0001-01-01T00:00:00Z",
+          "updated_at": "2022-02-22T19:29:38.961+05:30"
+        }
+      ]
+    },
+    "titles": {
+      "name": "titles",
+      "values": [
+        {
+          "value_type": "string",
+          "value_string": "Health Ministry quashes rumours about removal of mask mandate",
+          "source": "http://island.lk/health-ministry-quashes-rumours-about-removal-of-mask-mandate/",
+          "date": "2022-02-22T17:45:00.828+05:30",
+          "updated_at": "2022-02-22T17:46:11.31+05:30"
+        }
+      ]
+    }
+  },
+  "links": [
+    {
+      "title": "Rathindra Kuruwita",
+      "dates": [
+        "2022-02-22T17:45:00.828+05:30",
+        "2022-02-22T19:28:29.977+05:30"
+      ]
+    },
+    {
+      "title": "Ministry of Health",
+      "dates": [
+        "2022-02-22T17:45:00.828+05:30",
+        "2022-02-22T19:28:29.977+05:30"
+      ]
+    },
+    {
+      "title": "Medical Technical Services",
+      "dates": [
+        "2022-02-22T17:45:00.828+05:30",
+        "2022-02-22T19:28:29.977+05:30"
+      ]
+    },
+    {
+      "title": "Anwar Hamdani",
+      "dates": [
+        "2022-02-22T17:45:00.828+05:30",
+        "2022-02-22T19:28:29.977+05:30"
+      ]
+    },
+    {
+      "title": "Hamdani",
+      "dates": [
+        "2022-02-22T17:45:00.828+05:30",
+        "2022-02-22T19:28:29.977+05:30"
+      ]
+    },
+    {
+      "title": "Health Ministry",
+      "dates": [
+        "2022-02-22T17:45:00.828+05:30",
+        "2022-02-22T19:28:29.977+05:30"
+      ]
+    },
+    {
+      "title": "World Health Organization",
+      "dates": [
+        "2022-02-22T17:45:00.828+05:30",
+        "2022-02-22T19:28:29.977+05:30"
+      ]
+    },
+    {
+      "title": "General of Health Services",
+      "dates": [
+        "2022-02-22T17:45:00.828+05:30",
+        "2022-02-22T19:28:29.977+05:30"
+      ]
+    },
+    {
+      "title": "Asela Gunawardena",
+      "dates": [
+        "2022-02-22T17:45:00.828+05:30",
+        "2022-02-22T19:28:29.977+05:30"
+      ]
+    }
+  ],
+  "categories": [
+    "News",
+    "The Island",
+    "Local"
+  ],
+  "created_at": "2022-02-22T17:46:11.31+05:30",
+  "updated_at": "2022-02-22T19:29:38.961+05:30",
+  "snippet": "By Rathindra KuruwitaReports that the Ministry of Health was considering the removal of the mask mandate were baseless, Medical Technical Services Director Dr. Anwar Hamdani told the media yesterday.Dr. Hamdani said some people were spreading rumours that mask mandates would be removed soon. However, neither the government nor the Health Ministry had even thought of that, he said.“We can’t even think of such a decision. The booster roll-out is still going slow,” he said. The Sri Lankan health officials followed the example and recommendation of the World Health Organization on such matters, he said.Dr. Hamdani said that some foreign countries had decided that masks would no longer be mandatory. He said that such decisions were based on the number of people who had taken the vaccines and other considerations.“In our case, the number of COVID related deaths had increased by 17% compared to the beginning of the year. The number of COVID cases who required oxygen and had been admitted to ICUs had increased significantly.Dr. Hamdani said that people should get the booster shot as soon as possible and follow health guidelines to prevent the spread of COVID. Despite the best efforts of health officials only about six million people had so far taken the booster shot.“People are not taking the booster due to various myths and rumours. People should get the booster as soon as possible. They should also adhere to health guidelines. COVID may have many variants but the way all variants spread is the same,” he said.Meanwhile Director General of Health Services Dr. Asela Gunawardena said that removing of mask mandates would be in the last phase of the government’s campaign against the COVID-19 pandemic.“The masks will be removed in the end. We need to give booster doses to 14.1 million people. We have not even reached half of that. If we can give the booster to all, we can ensure some sort of herd immunity. If more people take the booster, we can relax more,” he said.",
+  "search_text": "By Rathindra KuruwitaReports that the Ministry of Health was considering the removal of the mask mandate were baseless, Medical Technical Services Director Dr. Anwar Hamdani told the media yesterday.Dr. Hamdani said some people were spreading rumours that mask mandates would be removed soon. However, neither the government nor the Health Ministry had even thought of that, he said.“We can’t even think of such a decision. The booster roll-out is still going slow,” he said. The Sri Lankan health officials followed the example and recommendation of the World Health Organization on such matters, he said.Dr. Hamdani said that some foreign countries had decided that masks would no longer be mandatory. He said that such decisions were based on the number of people who had taken the vaccines and other considerations.“In our case, the number of COVID related deaths had increased by 17% compared to the beginning of the year. The number of COVID cases who required oxygen and had been admitted to ICUs had increased significantly.Dr. Hamdani said that people should get the booster shot as soon as possible and follow health guidelines to prevent the spread of COVID. Despite the best efforts of health officials only about six million people had so far taken the booster shot.“People are not taking the booster due to various myths and rumours. People should get the booster as soon as possible. They should also adhere to health guidelines. COVID may have many variants but the way all variants spread is the same,” he said.Meanwhile Director General of Health Services Dr. Asela Gunawardena said that removing of mask mandates would be in the last phase of the government’s campaign against the COVID-19 pandemic.“The masks will be removed in the end. We need to give booster doses to 14.1 million people. We have not even reached half of that. If we can give the booster to all, we can ensure some sort of herd immunity. If more people take the booster, we can relax more,” he said."
+}
