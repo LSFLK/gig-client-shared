@@ -10,7 +10,9 @@ import {TestServerUrl} from "../../test-config/TestServer";
 
 fetchMock.doMock();
 describe("validateToken", () => {
-    const setMockState=()=>{console.log("this is a mock function")};
+    const setMockState = () => {
+        //mock function
+    };
     test("validateToken fails with no token", () => {
         process.env.REACT_APP_SERVER_URL = TestServerUrl;
         return validateToken(setMockState).then(data => {
