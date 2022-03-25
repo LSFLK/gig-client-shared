@@ -40,14 +40,14 @@ class FormattedContentViewer extends Component {
         let highlightedValue = highlightText(value.value_string, highlightTags, entityRoute);
         switch (value.value_type) {
             case ValueTypes.Date:
-                return this.formatDate(highlightedValue);
+                return this.formatDate(value.value_string);
             case ValueTypes.WikipediaText:
                 return this.formatWikiText(highlightedValue);
             case ValueTypes.HTML:
                 return this.viewAsHTML(highlightedValue);
             default:
                 return <Typography key={value.value_type + value.date}>{highlightedValue.split('\n').map(item => {
-                    return <span key={item}>{item}<br/></span>
+                    return <span key={item} dangerouslySetInnerHTML={{__html: item + '<br/>'}}/>
                 })} {value.date}</Typography>;
         }
     }
