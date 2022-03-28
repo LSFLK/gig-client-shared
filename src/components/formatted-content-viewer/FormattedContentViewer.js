@@ -48,7 +48,7 @@ class FormattedContentViewer extends Component {
             default:
                 return <Typography key={value.value_type + value.date}>{highlightedValue.split('\n').map(item => {
                     return <span key={item} dangerouslySetInnerHTML={{__html: item + '<br/>'}}/>
-                })} {value.date}</Typography>;
+                })}</Typography>;
         }
     }
 
