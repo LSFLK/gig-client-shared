@@ -53,7 +53,9 @@ class FormattedContentViewer extends Component {
     }
 
     formatDate(dateString) {
-        return <Typography key={dateString}>{new Date(dateString).toLocaleString()}</Typography>;
+        const {dateFormatter} = this.props;
+        return <Typography
+            key={dateString}>{dateFormatter ? dateFormatter(dateString) : new Date(dateString).toLocaleString()}</Typography>;
     }
 
     formatWikiText(textString) {
@@ -81,7 +83,7 @@ class FormattedContentViewer extends Component {
                     {this.formatValues(content)}
                 </div>
             );
-        }else if(content){
+        } else if (content) {
             return (
                 <div className={"mainContent"} key={key}>
                     {this.formatValue(content)}
