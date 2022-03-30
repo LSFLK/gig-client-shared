@@ -7,9 +7,10 @@ import 'jest-localstorage-mock';
 import testEntity from "./testEntity.json"
 import testModifiedEntity from "./testModifiedEntity.json"
 import {TestServerUrl} from "../../test-config/TestServer";
+import {ApiRoutes} from "../../routes";
 
 fetchMock.doMock();
-describe("validateToken", () => {
+describe("api function test", () => {
     const setMockState = () => {
         //mock function
     };
@@ -52,8 +53,22 @@ describe("validateToken", () => {
 
     test("getResults works", () => {
         process.env.REACT_APP_SERVER_URL = TestServerUrl;
-        return getResults(entityTitle, true, [], 1, setMockState, setMockState, 15).then(data => {
+        return getResults(entityTitle, ApiRoutes.search, true, [], 1, setMockState, setMockState, 15).then(data => {
             expect(data.length).toBe(15);
+        });
+    });
+
+    test("getEntityLinks works", () => {
+        process.env.REACT_APP_SERVER_URL = TestServerUrl;
+        return getResults("US to give two aircraft to Sri Lanka free of charge", ApiRoutes.links, true, [], 1, setMockState, setMockState, 15).then(data => {
+            expect(data.length).toBe(12);
+        });
+    });
+
+    test("getEntityRelations works", () => {
+        process.env.REACT_APP_SERVER_URL = TestServerUrl;
+        return getResults(entityTitle, ApiRoutes.relations, true, [], 1, setMockState, setMockState, 15).then(data => {
+            expect(data.length).toBe(14);
         });
     });
 
