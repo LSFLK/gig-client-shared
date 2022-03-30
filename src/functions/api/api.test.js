@@ -11,12 +11,10 @@ import {ApiRoutes} from "../../routes";
 
 fetchMock.doMock();
 describe("api function test", () => {
-    const setMockState = () => {
-        //mock function
-    };
+
     test("validateToken fails with no token", () => {
         process.env.REACT_APP_SERVER_URL = TestServerUrl;
-        return validateToken(setMockState).then(data => {
+        return validateToken().then(data => {
             expect(data.result).toBe(false);
         });
     });
@@ -30,7 +28,7 @@ describe("api function test", () => {
 
     test("validateToken after login", () => {
         process.env.REACT_APP_SERVER_URL = TestServerUrl;
-        return validateToken(setMockState).then(data => {
+        return validateToken().then(data => {
             expect(data.result).toBe(true);
         });
     });
@@ -46,28 +44,28 @@ describe("api function test", () => {
 
     test("getEntity works", () => {
         process.env.REACT_APP_SERVER_URL = TestServerUrl;
-        return getEntity(entityTitle, setMockState).then(data => {
+        return getEntity(entityTitle).then(data => {
             expect(data.title).toBe(entityTitle);
         });
     });
 
     test("getResults works", () => {
         process.env.REACT_APP_SERVER_URL = TestServerUrl;
-        return getResults(entityTitle, ApiRoutes.search, true, [], 1, setMockState, setMockState, 15).then(data => {
+        return getResults(entityTitle, ApiRoutes.search).then(data => {
             expect(data.length).toBe(15);
         });
     });
 
     test("getEntityLinks works", () => {
         process.env.REACT_APP_SERVER_URL = TestServerUrl;
-        return getResults("US to give two aircraft to Sri Lanka free of charge", ApiRoutes.links, true, [], 1, setMockState, setMockState, 15).then(data => {
+        return getResults("US to give two aircraft to Sri Lanka free of charge", ApiRoutes.links).then(data => {
             expect(data.length).toBe(12);
         });
     });
 
     test("getEntityRelations works", () => {
         process.env.REACT_APP_SERVER_URL = TestServerUrl;
-        return getResults(entityTitle, ApiRoutes.relations, true, [], 1, setMockState, setMockState, 15).then(data => {
+        return getResults(entityTitle, ApiRoutes.relations).then(data => {
             expect(data.length).toBe(14);
         });
     });

@@ -1,7 +1,9 @@
 import {ApiRoutes, getServerUrl} from "../../routes/Routes";
 import {getAuthHeaders, logout} from "../../auth/index";
 
-export async function validateToken(setUserState) {
+export async function validateToken(setUserState = () => {
+    console.log("setUser function is not included")
+}) {
 
     let loginUrl = getServerUrl(ApiRoutes.tokenValidation);
 
