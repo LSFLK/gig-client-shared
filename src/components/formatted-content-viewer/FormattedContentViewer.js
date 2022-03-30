@@ -37,7 +37,7 @@ class FormattedContentViewer extends Component {
 
     formatValue(value) {
         const {highlightTags, entityRoute} = this.props;
-        let highlightedValue = highlightText(value.value_string, highlightTags, entityRoute);
+        let highlightedValue = highlightText(value.value_string, entityRoute, highlightTags);
         switch (value.value_type) {
             case ValueTypes.Date:
                 return this.formatDate(value.value_string);

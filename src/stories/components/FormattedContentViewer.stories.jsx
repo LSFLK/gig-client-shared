@@ -33,6 +33,5 @@ WithShortData.args = {
     content: TestEntity.attributes["content"].values,
     highlightTags:["Rathindra Kuruwita", "Dr. Asela Gunawardena"],
     entityRoute:"entity/",
-    dateFormatter: ()=>{}
 };
 

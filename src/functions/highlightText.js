@@ -1,4 +1,4 @@
-export function highlightText(text, tags = [], linkRoute) {
+export function highlightText(text, linkRoute, tags = []) {
     if (!tags?.length) return text;
     const matches = [...text.matchAll(new RegExp(tags.join("|"), "ig"))];
     const startText = text.slice(0, matches[0]?.index);
@@ -11,7 +11,7 @@ export function highlightText(text, tags = [], linkRoute) {
             const nextIndex = matches[i + 1]?.index;
             const untilNextText = text.slice(endIndex, nextIndex);
             return "<span key='" + i + "'>" +
-                "<a class='highlighted-link' href='" + linkRoute +encodeURI(currentText)+ "'>" +
+                "<a class='highlighted-link' href='" + linkRoute + encodeURI(currentText) + "'>" +
                 "<span>" + currentText + "</span>" +
                 "</a>"
                 + untilNextText + "</span>"
