@@ -9,5 +9,5 @@ export async function getResults(searchParam, apiRoute, page = 1, limit = 15) {
     if (response?.status !== 200) {
         return null
     }
-    return await response.json();
+    return response.json();
 }
