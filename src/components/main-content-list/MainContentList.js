@@ -44,8 +44,8 @@ class MainContentList extends Component {
         }
         return (
             <>
-                {[1, 2, 3, 4].map(() => (
-                    <Paper className={classes.paper} elevation={elevation}>
+                {[1, 2, 3, 4].map((key) => (
+                    <Paper key={key} className={classes.paper} elevation={elevation}>
                         <Typography component="p" style={{textAlign: 'center'}}>
                             <Facebook/>
                         </Typography>
