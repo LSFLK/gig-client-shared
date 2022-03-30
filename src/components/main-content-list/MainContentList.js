@@ -44,26 +44,13 @@ class MainContentList extends Component {
         }
         return (
             <>
-                <Paper className={classes.paper} elevation={elevation}>
-                    <Typography component="p" style={{textAlign: 'center'}}>
-                        <Facebook/>
-                    </Typography>
-                </Paper>
-                <Paper className={classes.paper} elevation={elevation}>
-                    <Typography component="p" style={{textAlign: 'center'}}>
-                        <Facebook/>
-                    </Typography>
-                </Paper>
-                <Paper className={classes.paper} elevation={elevation}>
-                    <Typography component="p" style={{textAlign: 'center'}}>
-                        <Facebook/>
-                    </Typography>
-                </Paper>
-                <Paper className={classes.paper} elevation={elevation}>
-                    <Typography component="p" style={{textAlign: 'center'}}>
-                        <Facebook/>
-                    </Typography>
-                </Paper>
+                {[1, 2, 3, 4].map(() => (
+                    <Paper className={classes.paper} elevation={elevation}>
+                        <Typography component="p" style={{textAlign: 'center'}}>
+                            <Facebook/>
+                        </Typography>
+                    </Paper>
+                ))}
             </>
         )
 
