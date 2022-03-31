@@ -1,9 +1,7 @@
 import {ApiRoutes, getServerUrl} from "../../routes/Routes";
-import {getAuthHeaders, logout} from "../../auth/index";
+import {getAuthHeaders, clearTokens} from "../../auth/index";
 
-export async function validateToken(setUserState = () => {
-    console.log("setUser function is not included")
-}) {
+export async function validateToken() {
 
     let loginUrl = getServerUrl(ApiRoutes.tokenValidation);
 
@@ -19,7 +17,7 @@ export async function validateToken(setUserState = () => {
         return {error: null, result: true}
     }
 
-    logout(setUserState);
+    clearTokens();
     console.log("token validation error! logging out.");
     return {error: "token validation error! logging out.", result: false}
 }

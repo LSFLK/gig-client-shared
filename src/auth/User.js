@@ -26,11 +26,7 @@ export function setAuthToken(token) {
     authStorage.setItem(AuthStore.token, token)
 }
 
-export function logout(setUserState) {
-    if (!setUserState) {
-        console.log("user set state function is undefined. This might cause the App to not function properly.")
-    }
-    setUserState("");
+export function clearTokens() {
     for (const [key, value] of Object.entries(AuthStore)) {
         console.log("removing auth data:", key);
         authStorage.removeItem(value);
