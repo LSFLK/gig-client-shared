@@ -3,7 +3,7 @@ export const ApiRoutes = {
     tokenValidation: 'api/token/validate',
     login: 'api/user/login',
     status: 'api/status/',
-    search: 'api/search/',
+    search: 'api/search?query=',
     entity: 'api/get/',
     links: 'api/links/',
     relations: 'api/relations/',
