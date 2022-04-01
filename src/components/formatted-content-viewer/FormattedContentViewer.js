@@ -5,27 +5,6 @@ import {ValueTypes} from '../../constants/ValueTypes';
 import {Facebook} from 'react-content-loader';
 import {highlightText} from "../../functions/index";
 
-const styles = theme => ({
-    container: {
-        minHeight: '100vh',
-        backgroundColor: '#eeeeee',
-        padding: '10px'
-    },
-    searchResult: {
-        paddingTop: "16px",
-        paddingBottom: "16px",
-        color: 'black',
-        textAlign: 'left',
-        margin: '10px',
-    },
-    paragraph: {
-        margin: '15px 0'
-    },
-    link: {
-        paddingRight: '10px'
-    }
-});
-
 class FormattedContentViewer extends Component {
 
     formatValues(values) {
@@ -65,8 +44,7 @@ class FormattedContentViewer extends Component {
             } else if ((item.match(/=/g) || []).length === 6) {
                 return <Typography variant="h6" component="h6" key={i}>{item.replace(/=/g, '')}</Typography>;
             } else {
-                return <Typography component="p" className={this.props.classes.paragraph}
-                                   key={i}>{item.replace(/=/g, '')}</Typography>
+                return <Typography component="p" key={i}>{item.replace(/=/g, '')}</Typography>
             }
         });
     }
@@ -96,4 +74,4 @@ class FormattedContentViewer extends Component {
     }
 }
 
-export default withStyles(styles)(FormattedContentViewer);
+export default (FormattedContentViewer);
