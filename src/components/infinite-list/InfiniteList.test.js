@@ -4,9 +4,10 @@ import {BrowserRouter} from 'react-router-dom';
 import 'regenerator-runtime/runtime';
 
 import InfiniteList from "./InfiniteList";
+import {MainContentList} from "../index";
 
 describe("InfiniteList", () => {
     test("renders the InfiniteList component", () => {
-        render(<BrowserRouter><InfiniteList/></BrowserRouter>);
+        render(<BrowserRouter><InfiniteList list={(results) => <MainContentList listItems={results} elevation={3}/>}/></BrowserRouter>);
     });
 });
