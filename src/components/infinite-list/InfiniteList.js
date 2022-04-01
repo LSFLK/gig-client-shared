@@ -44,8 +44,8 @@ class InfiniteList extends Component {
 
 
     componentDidUpdate(prevProps) {
-        const {getResults}=this.props;
-        if (getResults !== prevProps.getResults) {
+        const {searchKey}=this.props;
+        if (searchKey !== prevProps.searchKey) {
             this.loadResults().then(() => console.log("initial results loaded"));
         }
     }

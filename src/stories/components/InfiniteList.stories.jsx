@@ -50,6 +50,7 @@ NoResults.args = {
 export const WithResults = Template.bind({});
 process.env.REACT_APP_SERVER_URL = TestServerUrl;
 WithResults.args = {
+    searchKey:"Sri Lanka",
     getResults: (page = 1, limit = 15) => getResults("Sri Lanka", ApiRoutes.search, page, limit),
 };
 
