@@ -8,7 +8,7 @@ export default ["constants", "routes", "auth", "components", "functions"].map((m
     {
         input: "src/" + module + "/index.js",
         output: [
-            {file: "dist/" + module + "/index.cjs", format: 'cjs'},
+            {file: "dist/" + module + "/index.cjs.js", format: 'cjs'},
             {file: "dist/" + module + "/index.js", format: 'esm'}
         ],
         plugins: [
