@@ -1,6 +1,5 @@
 import React, {Component} from "react";
 import Typography from '@mui/material/Typography';
-import {withStyles} from '@mui/styles';
 import {ValueTypes} from '../../constants/ValueTypes';
 import {Facebook} from 'react-content-loader';
 import {highlightText} from "../../functions/index";
