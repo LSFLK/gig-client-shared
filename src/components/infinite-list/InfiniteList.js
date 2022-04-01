@@ -31,7 +31,7 @@ class InfiniteList extends Component {
             this.setState({listEnded: true});
         }
         else if (data && nextPage === 1) {
-            this.setState({result: data, nextPage: 2, listEnded: false});
+            this.setState({result: data, nextPage: 2});
         } else {
             this.setState({result: [...result, ...data], nextPage: nextPage + 1});
         }
@@ -46,6 +46,11 @@ class InfiniteList extends Component {
     componentDidUpdate(prevProps) {
         const {searchKey}=this.props;
         if (searchKey !== prevProps.searchKey) {
+            this.setState({
+                isLoading: false,
+                result: null,
+                nextPage: 1,
+                listEnded: false, });
             this.loadResults().then(() => console.log("initial results loaded"));
         }
     }
