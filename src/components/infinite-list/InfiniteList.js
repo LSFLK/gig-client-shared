@@ -18,8 +18,8 @@ class InfiniteList extends Component {
         this.loadResults = this.loadResults.bind(this);
     }
 
-    async loadResults() {
-        const {result, nextPage} = this.state;
+    async loadResults(nextPage = this.state.nextPage) {
+        const {result} = this.state;
 
         this.setState({isLoading: true});
 
@@ -39,19 +39,20 @@ class InfiniteList extends Component {
     }
 
     componentDidMount() {
-        this.loadResults().then(() => console.log("initial results loaded"));
+        this.loadResults(1).then(() => console.log("initial results loaded"));
     }
 
 
     componentDidUpdate(prevProps) {
-        const {searchKey}=this.props;
+        const {searchKey} = this.props;
         if (searchKey !== prevProps.searchKey) {
             this.setState({
                 isLoading: false,
                 result: null,
                 nextPage: 1,
-                listEnded: false, });
-            this.loadResults().then(() => console.log("initial results loaded"));
+                listEnded: false,
+            });
+            this.loadResults(1).then(() => console.log("initial results loaded"));
         }
     }
 
