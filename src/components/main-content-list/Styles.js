@@ -1,4 +1,4 @@
-const Styles = theme => ({
+const Styles = _theme => ({
             appBar: {
                 backgroundColor: '#282c34',
                 padding: "8px",
