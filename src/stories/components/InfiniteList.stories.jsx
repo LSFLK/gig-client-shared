@@ -11,7 +11,21 @@ export default {
     title: 'Example/InfiniteList',
     component: InfiniteList,
     // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
-    argTypes: {},
+    argTypes: {
+        label: {
+            name: 'label',
+            type: { name: 'string', required: false },
+            defaultValue: 'Hello',
+            description: 'demo description',
+            table: {
+                type: { summary: 'string' },
+                defaultValue: { summary: 'Hello' },
+            },
+            control: {
+                type: 'text'
+            }
+        }
+    },
 };
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
