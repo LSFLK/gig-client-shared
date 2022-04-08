@@ -2,7 +2,7 @@
   "name": "@lsflk/gig-client-shared",
   "repository": "git://github.com/lsflk/gig-client-shared",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "registry": "http://registry.npmjs.org"
   },
   "version": "0.3.39",
   "exports": {
