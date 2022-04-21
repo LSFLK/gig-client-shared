@@ -53,16 +53,16 @@ class FormattedContentViewer extends Component {
     }
 
     render() {
-        const {content, key} = this.props;
+        const {content, childKey} = this.props;
         if (content && Array.isArray(content)) {
             return (
-                <div className={"mainContent"} key={key}>
+                <div className={"mainContent"} key={childKey+'child'}>
                     {this.formatValues(content)}
                 </div>
             );
         } else if (content) {
             return (
-                <div className={"mainContent"} key={key}>
+                <div className={"mainContent"} key={childKey+'child'}>
                     {this.formatValue(content)}
                 </div>
             );

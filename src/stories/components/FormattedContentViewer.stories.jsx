@@ -17,19 +17,19 @@ const Template = (args) => <FormattedContentViewer {...args}/>;
 
 export const Loading = Template.bind({});
 Loading.args = {
-  key: 3,
+  childKey: 3,
   content: null,
 };
 
 export const WithData = Template.bind({});
 WithData.args = {
-    key: 3,
+    childKey: 3,
     content: testSearchResults[0].attributes["content"].values,
 };
 
 export const WithShortData = Template.bind({});
 WithShortData.args = {
-    key: 3,
+    childKey: 3,
     content: TestEntity.attributes["content"].values,
     highlightTags:["Rathindra Kuruwita", "Dr. Asela Gunawardena"],
     entityRoute:"entity/",
