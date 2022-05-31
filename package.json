@@ -4,7 +4,7 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
   },
-  "version": "0.3.42",
+  "version": "0.3.43",
   "exports": {
     "./constants": "./constants/index.js",
     "./routes": "./routes/index.js",
