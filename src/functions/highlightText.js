@@ -2,7 +2,7 @@ export function highlightText(text, linkRoute, tags = []) {
     if (!tags?.length) return text;
     const matches = [...text.matchAll(new RegExp(tags.join("|"), "ig"))];
     const startText = text.slice(0, matches[0]?.index);
-    return (
+    let result = (
         "<span>" + startText +
         matches.map((match, i) => {
             const startIndex = match.index;
@@ -18,4 +18,5 @@ export function highlightText(text, linkRoute, tags = []) {
         })
         + "</span>"
     );
+    return result.replaceAll(">,<","><");
 }

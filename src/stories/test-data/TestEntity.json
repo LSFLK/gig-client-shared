@@ -5,6 +5,25 @@
   "source_signature": "trusted",
   "source_date": "2022-02-22T17:45:00.828+05:30",
   "attributes": {
+    "organizations": {
+      "name": "organizations",
+      "values": [
+        {
+          "value_type": "json",
+          "value_string": "['National Planning Department','Department of Census and Statistics','Institute of Policy Studies','Sustainable Development Council','Office of Comptroller General','Department of Valuation','Sri Lanka Accounting and Auditing Standard Monitoring Board','Public Utilities Commission of Sri Lanka','Welfare Benefits Board','Public Service Mutual Provident Fund']",
+          "source": "Gazette gazette-2021-7-7.csv",
+          "date": "2021-07-07T00:00:00Z",
+          "updated_at": "2022-05-25T14:29:23.424Z"
+        },
+        {
+          "value_type": "json",
+          "value_string": "['Buddha Sasana Fund','Buddhist Renaissance Fund','Central Cultural Fund']",
+          "source": "Gazette gazette-2021-7-8.csv",
+          "date": "2021-07-08T00:00:00Z",
+          "updated_at": "2022-05-25T14:29:30.332Z"
+        }
+      ]
+    },
     "author": {
       "name": "author",
       "values": [

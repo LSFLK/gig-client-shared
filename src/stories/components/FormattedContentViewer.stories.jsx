@@ -35,3 +35,11 @@ WithShortData.args = {
     entityRoute:"entity/",
 };
 
+export const WithJsonData = Template.bind({});
+WithJsonData.args = {
+    childKey: 3,
+    content: TestEntity.attributes["organizations"].values,
+    highlightTags:['National Planning Department','Department of Census and Statistics','Institute of Policy Studies','Sustainable Development Council','Office of Comptroller General','Department of Valuation','Sri Lanka Accounting and Auditing Standard Monitoring Board','Public Utilities Commission of Sri Lanka','Welfare Benefits Board','Public Service Mutual Provident Fund'],
+    entityRoute:"entity/",
+};
+
