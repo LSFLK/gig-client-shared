@@ -18,5 +18,5 @@ export function highlightText(text, linkRoute, tags = []) {
         })
         + "</span>"
     );
-    return result.replaceAll(">,<","><");
+    return result.split(">,<").join("><");
 }
