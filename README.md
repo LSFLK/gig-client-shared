@@ -13,6 +13,8 @@ Open [http://localhost:6006](http://localhost:6006) to view React Components.
 * To run test and publish commands you need to setup a local GIG server.
 Refer to [https://github.com/LSFLK/GIG] for more details.
 * Modify src/test-config/TestServer file to change the test server url.
+* An admin user account is required for testing: 
+#### `someone@gmail.com-abc123`
 
 Runs jest test on all components and functions in the terminal.
 
