@@ -4,5 +4,6 @@ export const ValueTypes = {
     WikipediaText: "wikiText",
     JSON: "json",
     ObjectId: "objectId",
-    HTML: "html"
+    HTML: "html",
+    Number: "number"
 };
