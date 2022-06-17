@@ -24,7 +24,7 @@ class FormattedContentViewer extends Component {
             case ValueTypes.HTML:
                 return this.viewAsHTML(highlightedValue);
             default:
-                return <Typography key={value.value_type + value.date}>{highlightedValue.split('\n').map(item, index => {
+                return <Typography key={value.value_type + value.date}>{highlightedValue.split('\n').map((item, index) => {
                     return <span key={"span-"+index+item} dangerouslySetInnerHTML={{__html: item + '<br/>'}}/>
                 })}</Typography>;
         }
