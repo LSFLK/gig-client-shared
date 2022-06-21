@@ -31,7 +31,7 @@ class MainContentList extends Component {
                                              Moment(entity.source_date).format('DD  MMM YYYY h:mm A') :
                                              Moment(entity.updated_at).format('DD  MMM YYYY h:mm A')}
                                          description={entity.snippet}
-                                         links={entity.links.slice(0, 20)}
+                                         links={entity.links?.slice(0, 20)}
                                          categories={entity.categories}
                                          elevation={elevation}
                                          entityRoute={entityRoute}
